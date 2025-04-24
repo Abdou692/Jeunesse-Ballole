@@ -675,6 +675,9 @@ footer {
 
     /* ... autres styles ... */
 
+    
+    /* ... autres styles ... */
+
     #bureau .section-title {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-size: 2.2em;
@@ -746,7 +749,7 @@ footer {
         font-family: 'Georgia', serif;
         font-style: italic;
         color: #6c757d;
-        font-size: 1.2em; /* Taille de police augmentée pour le poste */
+        font-size: 1.4em; /* Taille de police AGRANDIE pour le poste */
     }
 
     .membre-info h5 { /* Style par défaut pour les autres noms (si nécessaire) */
@@ -812,7 +815,7 @@ footer {
             font-size: 1.4em; /* Ajustement en responsive si nécessaire */
         }
         .membre-card:nth-child(-n+6) .membre-info p.poste {
-            font-size: 1.1em; /* Ajustement en responsive si nécessaire */
+            font-size: 1.3em; /* Ajustement en responsive si nécessaire */
         }
         .nom-important h4 {
             font-size: 1.6em;
@@ -824,7 +827,6 @@ footer {
 
     /* Import de la police Montserrat depuis Google Fonts */
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-
 
 
 /* ... autres styles ... */
@@ -1085,4 +1087,58 @@ footer {
 
     /* ... autres styles ... */
 
-   
+
+    /* ... autres styles ... */
+
+    @media (max-width: 767.98px) {
+        /* ... autres styles responsive ... */
+
+        .navbar-collapse.show .navbar-nav {
+            display: flex; /* Active Flexbox sur la liste principale des liens */
+            flex-direction: column; /* Aligne les liens en colonne */
+            align-items: center; /* Centre les éléments horizontalement */
+            width: 100%; /* Occupe toute la largeur */
+        }
+
+        .navbar-collapse.show .navbar-nav .nav-item {
+            width: 100%; /* Chaque élément occupe toute la largeur du conteneur Flex */
+            text-align: center; /* Centre le texte à l'intérieur de chaque élément */
+        }
+
+        .navbar-collapse.show .navbar-nav .dropdown-menu {
+            background-color: #0f4e8d; /* Gardons un fond clair */
+            border: 1px solid #184b7e;
+            border-top: none;
+            width: 100%; /* Le sous-menu occupe aussi toute la largeur */
+        }
+
+        .navbar-collapse.show .navbar-nav .dropdown-item {
+            color: #184b7e;
+            text-align: center; /* S'assure que le texte du sous-menu est centré */
+        }
+
+        .navbar-collapse.show .navbar-nav .dropdown-item:hover,
+        .navbar-collapse.show .navbar-nav .dropdown-item:focus {
+
+            color: #cb166b;
+        }
+    }
+
+
+    /* ... autres styles ... */
+
+    footer .social-links a {
+        font-size: 5em;
+        margin-right: 0.5em;
+    }
+
+    footer .social-links a:last-child {
+        margin-right: 0;
+    }
+
+    @media (max-width: 575.98px) {
+        footer .social-links a {
+            font-size: 4.5em;
+        }
+    }
+
