@@ -800,6 +800,12 @@ footer {
         font-size: 1.1em;
     }
 
+
+    /* styles.css */
+#soutenez-nous {
+    display: none;
+}
+
     /* Ajustements potentiels pour la taille de police en responsive */
     @media (max-width: 767.98px) {
         #bureau .section-title {
