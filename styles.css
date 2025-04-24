@@ -673,6 +673,157 @@ footer {
 }
 
 
+    /* ... autres styles ... */
+
+    #bureau .section-title {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 2.2em;
+        color: rgb(2, 2, 177);
+        text-align: center;
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+        padding-bottom: 0.5rem;
+    }
+
+    .bureau-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+    }
+
+    .membre-card {
+        background-color: #f8f9fa;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding: 1.5rem;
+        text-align: center;
+    }
+
+    .photo-container {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: 0 auto 1rem;
+        border: 5px solid #bee5eb;
+    }
+
+    .photo-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .photo-container.photo-double {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .photo-container.photo-double .mini-photo {
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 3px solid #bee5eb;
+    }
+
+    .photo-container.photo-double .mini-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* Styles spécifiques pour les 6 premiers membres du bureau */
+    .membre-card:nth-child(-n+6) .membre-info h5 { /* Sélectionne les 6 premiers .membre-card */
+        font-family: 'Montserrat', sans-serif; /* Nouvelle police pour le nom */
+        font-size: 1.5em; /* Légèrement plus grand */
+        color: #28a745;
+        margin-bottom: 0.5rem;
+    }
+
+    .membre-card:nth-child(-n+6) .membre-info p.poste { /* Sélectionne le poste des 6 premiers membres */
+        font-family: 'Georgia', serif;
+        font-style: italic;
+        color: #6c757d;
+        font-size: 1.2em; /* Taille de police augmentée pour le poste */
+    }
+
+    .membre-info h5 { /* Style par défaut pour les autres noms (si nécessaire) */
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 1.4em;
+        color: #28a745;
+        margin-bottom: 0.5rem;
+    }
+
+    .membre-info p { /* Style par défaut pour les autres informations */
+        font-family: 'Arial', sans-serif;
+        font-size: 1.1em;
+        color: #495057;
+        margin-bottom: 0.3rem;
+    }
+
+    .membre-info .poste { /* Style par défaut pour le poste */
+        font-family: 'Georgia', serif;
+        font-style: italic;
+        color: #6c757d;
+        font-size: 1.1em; /* Taille par défaut */
+    }
+
+    .membre-info .contact {
+        font-family: 'Arial', sans-serif;
+        font-weight: bold;
+        color: #007bff;
+    }
+
+    .nom-important {
+        grid-column: 1 / -1;
+        background-color: #fff3cd;
+        border: 1px solid #ffeeba;
+        color: #85640a;
+        padding: 1.5rem;
+        border-radius: 8px;
+        text-align: center;
+    }
+
+    .nom-important h4 {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 1.8em;
+        margin-bottom: 0.5rem;
+    }
+
+    .nom-important p {
+        font-family: 'Arial', sans-serif;
+        font-size: 1.1em;
+    }
+
+    /* Ajustements potentiels pour la taille de police en responsive */
+    @media (max-width: 767.98px) {
+        #bureau .section-title {
+            font-size: 2.0em;
+        }
+        .membre-info h5 {
+            font-size: 1.3em;
+        }
+        .membre-info p {
+            font-size: 1.2em;
+        }
+        .membre-card:nth-child(-n+6) .membre-info h5 {
+            font-size: 1.4em; /* Ajustement en responsive si nécessaire */
+        }
+        .membre-card:nth-child(-n+6) .membre-info p.poste {
+            font-size: 1.1em; /* Ajustement en responsive si nécessaire */
+        }
+        .nom-important h4 {
+            font-size: 1.6em;
+        }
+        .nom-important p {
+            font-size: 1.2em;
+        }
+    }
+
+    /* Import de la police Montserrat depuis Google Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 
 
