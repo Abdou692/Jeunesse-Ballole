@@ -3,43 +3,159 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nos Événements - Jeunesse Ballolé</title>
+    <title>Événements - Jeunesse Ballolé</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Styles spécifiques à cette page */
+        .event-section {
+            margin-bottom: 4rem;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+        }
+
+        .event-title-wrapper {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            color: #007bff; /* Couleur principale */
+        }
+
+        .event-title-wrapper i {
+            font-size: 2rem;
+            margin-right: 1rem;
+        }
+
+        .social-link-section {
+            text-align: center;
+            padding: 2rem;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .social-link-section h3 {
+            color: #28a745; /* Couleur secondaire */
+            margin-bottom: 1.5rem;
+        }
+
+        .social-link-section p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-link-section a {
+            font-size: 2.5rem;
+            margin: 0 1rem;
+            color: #333;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .social-link-section a:hover {
+            opacity: 0.8;
+        }
+
+        .social-link-section .bi-facebook {
+            color: #1877F2;
+        }
+
+        .social-link-section .bi-instagram {
+            color: #E4405F;
+        }
+
+        .social-link-section .bi-tiktok {
+            color: #000000;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-md navbar-dark">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
             <div class="container">
-                <a class="navbar-brand" href="index.html">Jeunesse Ballolé</a>
+                <div class="navbar-brand-container d-flex align-items-center">
+                    <div class="logo-container me-2">
+                        <img src="logo.png" alt="Human'isa Logo" class="humanisa-logo rounded-circle" height="40" width="40" style="object-fit: cover;">
+                    </div>
+                    <a class="navbar-brand" href="index.html">
+                        Jeunesse Ballolé
+                    </a>
+                    <div class="navbar-brand-social ms-auto">
+                        <a href="https://www.facebook.com/share/15HXA5gqVE/?mibextid=wwXIfr" target="_blank" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="https://www.instagram.com/jeunesse_ballole/" target="_blank" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" target="_blank" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" target="_blank" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                        <a href="https://www.tiktok.com/@jeunesse.ballole?_t=ZN-8vmyh37b3QM&_r=1" target="_blank" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+                    </div>
+                </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
-                        <li class="nav-item"><a class="nav-link" href="actions.html">Actions</a></li>
-                        <li class="nav-item"><a class="nav-link" href="evenements.html">Événements</a></li>
-                        <li class="nav-item"><a class="nav-link" href="soutien.html">Soutien</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Formulaire de Contact</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="accueilDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Accueil
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="accueilDropdown">
+                                <li><a class="dropdown-item" href="index.html#presentation">Présentation</a></li>
+                                <li><a class="dropdown-item" href="index.html#bureau">Notre Bureau</a></li>
+                                <li><a class="dropdown-item" href="index.html#poles">Nos Pôles d'Action</a></li>
+                                <li><a class="dropdown-item" href="index.html#equipesSportives">Nos Équipes Sportives</a></li>
+                                <li><a class="dropdown-item" href="index.html#coursManjack">Cours de Manjack</a></li>
+                                <li><a class="dropdown-item" href="index.html#cotisations">Cotisations</a></li>
+                                <li><a class="dropdown-item" href="index.html#contact">Nos Contacts & Réseaux Sociaux</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="qui_sommes_nous.html">Qui sommes nous ?</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="evenements.html">Événements</a></li>
+                        <li class="nav-item"><a class="nav-link" href="nous_aider.html">Nous aider</a></li>
+                        <li class="nav-item"><a class="nav-link" href="news_du_projet.html">News du projet</a></li>
+                        <li class="nav-item"><a class="nav-link" href="l_histoire_Ballole.html">Notre Histoire</a></li>
+                        <li class="nav-item"><a class="nav-link" href="nos_partenaires.html">Nos partenaires</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact_Ballole.html">Contact</a></li>
+                    </ul>
                 </div>
             </div>
         </nav>
     </header>
 
     <main class="container my-5">
-        <section class="mb-5">
-            <h2>Nos Événements</h2>
+        <section class="event-section">
+         
+            <div class="event-title-wrapper d-flex align-items-center">
+                <i class="bi bi-calendar-event-fill"></i>
+                <h2>Découvrez nos Événements</h2>
+            </div>
+            
+            <p class="lead">Restez informé de nos dernières actualités et participez à nos événements pour soutenir la Jeunesse Ballolé !</p>
             <div class="evenements">
                 <div id="fb-root"></div>
-                <script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v18.0" nonce="YOUR_NONCE"></script>
+                <script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v18.0&appId=YOUR_APP_ID&autoLogAppEvents=1" nonce="YOUR_NONCE"></script>
 
-                <div class="fb-post" data-href="https://www.facebook.com/YOUR_PAGE_ID/posts/YOUR_POST_ID" data-width="500" data-show-text="true"></div>
+                <div class="fb-post" data-href="https://www.facebook.com/share/15HXA5gqVE/?mibextid=wwXIfr" data-width="500" data-show-text="true"></div>
 
-                <div class="fb-video" data-href="https://www.facebook.com/YOUR_PAGE_ID/videos/YOUR_VIDEO_ID/" data-width="500" data-show-text="false"></div>
+                <div class="fb-video" data-href="https://www.facebook.com/Jeunesse-Ballol%C3%A9-113442881463893/videos/YOUR_VIDEO_ID/" data-width="500" data-show-text="false"></div>
+                <section class="social-link-section">
+                    <h3><i class="bi bi-megaphone-fill text-success me-2"></i> Ne manquez rien ! Suivez-nous !</h3>
+                    <p>Pour ne pas rater nos événements passés et futurs, rejoignez notre communauté sur les réseaux sociaux :</p>
+                    <div>
+                        <a href="https://www.facebook.com/share/15HXA5gqVE/?mibextid=wwXIfr" target="_blank" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="https://www.instagram.com/jeunesse_ballole/" target="_blank" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@jeunesse.ballole?_t=ZN-8vmyh37b3QM&_r=1" target="_blank" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+                    </div>
+                </section>
 
+                <h3><i class="bi bi-arrow-right-square-fill text-primary me-2"></i> Événements à venir</h3>
+                <ul>
+                    <li><i class="bi bi-chevron-right text-info me-1"></i> [Date] : [Nom de l'événement] - [Description courte]</li>
+                    <li><i class="bi bi-chevron-right text-info me-1"></i> [Date] : [Nom de l'événement] - [Description courte]</li>
+                </ul>
             </div>
         </section>
+
+        
     </main>
 
     <footer>

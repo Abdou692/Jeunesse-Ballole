@@ -1,26 +1,31 @@
+/* styles.css */
 html {
     scroll-behavior: smooth;
 }
 
-/* styles.css */
-
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    color: #333;
+    font-family: 'Open Sans', sans-serif; /* Police moderne et lisible pour le corps */
+    line-height: 1.7; /* Amélioration de la lisibilité du texte */
+    color: #2d0b53; /* Couleur de texte légèrement plus douce */
     background-color: #f8f9fa;
 }
 
 header {
     background-color: #36454F !important;
     padding: 1.5rem 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* Ombre plus prononcée */
 }
 
 .navbar-brand {
-    font-weight: bold;
-    font-size: 1.8rem;
+    font-family: 'Montserrat', sans-serif; /* Police plus distinctive pour la marque */
+    font-weight: 700; /* Gras */
+    font-size: 2rem; /* Taille légèrement plus grande */
     color: #FFD700 !important;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar-brand:hover {
+    transform: scale(1.08); /* Effet de survol plus marqué */
 }
 
 .navbar-nav {
@@ -29,32 +34,44 @@ header {
 }
 
 .nav-link {
+    font-family: 'Roboto', sans-serif; /* Police claire pour la navigation */
     color: #E0FFFF !important;
-    transition: color 0.3s ease, background-color 0.3s ease;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    margin: 0 5px;
-    background-color: rgba(255, 255, 255, 0.1);
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease-in-out;
+    padding: 0.7rem 1.2rem; /* Espacement interne légèrement plus grand */
+    border-radius: 8px; /* Bords plus arrondis */
+    margin: 0 8px; /* Marge légèrement plus grande */
+    background-color:#36454F; /* Fond encore plus subtil */
     width: fit-content;
     white-space: nowrap;
+    font-size: 1.1rem; /* Taille de police légèrement plus grande */
 }
 
 .nav-link:hover {
     color: #FF6347 !important;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.15); /* Fond plus visible au survol */
+    transform: translateY(-3px); /* Effet de survol plus prononcé */
+}
+
+.navbar-brand-social .bi-tiktok {
+    color: #0000ff !important; /* Bleu */
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1250px; /* Légèrement plus large */
 }
 
 section {
-    padding: 2rem;
-    margin-bottom: 2.5rem;
+    padding: 3rem 2rem; /* Padding plus important */
+    margin-bottom: 3rem; /* Marge plus importante */
     background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 12px; /* Bords plus arrondis */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Ombre plus douce mais plus étendue */
     border: 1px solid #e0e0e0;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+section:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12); /* Ombre plus marquée au survol */
 }
 
 section:last-child {
@@ -62,13 +79,14 @@ section:last-child {
 }
 
 h2 {
+    font-family: 'Poppins', sans-serif; /* Police moderne et percutante pour les titres */
     color: #191970;
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 2rem;
+    font-size: 3rem; /* Titres plus grands */
+    font-weight: 700; /* Titres plus gras */
+    margin-bottom: 2.5rem; /* Marge plus importante */
     text-align: center;
     position: relative;
-    padding-bottom: 1rem;
+    padding-bottom: 1.2rem;
 }
 
 h2::after {
@@ -77,96 +95,122 @@ h2::after {
     left: 50%;
     bottom: 0;
     transform: translateX(-50%);
-    width: 80px;
-    height: 4px;
+    width: 100px; /* Barre de soulignement plus longue */
+    height: 5px; /* Barre de soulignement plus épaisse */
     background-color: #FFD700;
+    border-radius: 2px; /* Bords arrondis pour la barre */
 }
 
 .card {
-    border: 1px solid #ddd;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease;
-    border-radius: 8px;
+    border: none; /* Suppression de la bordure par défaut */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06); /* Ombre plus légère */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-radius: 12px; /* Bords plus arrondis */
     overflow: hidden;
 }
 
 .card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-10px); /* Effet de survol plus prononcé */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Ombre plus marquée au survol */
 }
 
 .card-img-top {
-    height: 220px;
+    height: 240px; /* Hauteur légèrement plus grande */
     object-fit: cover;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-title {
+    font-family: 'Roboto Slab', serif; /* Police avec empattement pour un aspect plus affirmé */
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.card-text {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.7;
 }
 
 .reseaux-sociaux {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     text-align: center;
 }
 
 .reseaux-sociaux a {
-    margin: 0.5rem;
+    margin: 0.7rem;
     text-decoration: none;
     color: inherit;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease-in-out;
     display: inline-flex;
     align-items: center;
     white-space: nowrap;
 }
 
 .reseaux-sociaux a:hover {
-    transform: scale(1.1);
+    transform: scale(1.15); /* Effet de survol plus marqué */
 }
 
 .reseaux-sociaux i {
-    font-size: 1.5rem;
-    margin-right: 0.3rem;
+    font-size: 1.8rem; /* Icônes plus grandes */
+    margin-right: 0.5rem;
+    transition: color 0.3s ease-in-out;
 }
 
-.bi-instagram {
+.bi-instagram:hover {
     color: #E4405F;
 }
 
-.bi-facebook {
+.bi-facebook:hover {
     color: #1877F2;
 }
 
-.bi-tiktok {
+.bi-tiktok:hover {
     color: #000;
 }
 
-.bi-linkedin {
+.bi-linkedin:hover {
     color: #0A66C2;
 }
 
 .don-button {
-    display: block; /* Pour occuper toute la largeur du conteneur et permettre le centrage */
-    width: fit-content; /* Ajuste la largeur au contenu */
-    margin: 20px auto; /* Marge haute et basse, auto pour centrer horizontalement */
-    padding: 15px 30px;
-    font-size: 1.2em;
-    font-weight: bold;
+    display: block;
+    width: fit-content;
+    margin: 30px auto; /* Marge plus importante */
+    padding: 18px 35px; /* Padding plus important */
+    font-size: 1.3em; /* Taille de police plus grande */
+    font-weight: 700; /* Texte plus gras */
     text-align: center;
     text-decoration: none;
     color: #fff;
-    background-color: #28a745; /* Couleur verte Bootstrap */
+    background-color: #28a745;
     border: 2px solid #28a745;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
+    border-radius: 10px; /* Bords plus arrondis */
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ajout d'une ombre */
 }
 
-
 .don-button:hover {
-    background-color: #218838; /* Couleur verte plus foncée au survol */
+    background-color: #218838;
     border-color: #1e7e34;
+    transform: scale(1.08); /* Effet de survol plus marqué */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Ombre plus marquée au survol */
 }
 
 footer {
     background-color: #000000;
     color: #FFD700;
-    padding: 1.5rem 0;
+    padding: 2rem 0; /* Padding plus important */
     text-align: center;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.15); /* Ombre plus prononcée */
+    font-size: 0.9rem; /* Taille de police légèrement plus petite */
 }
 
 .video-container {
@@ -174,8 +218,8 @@ footer {
     padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px; /* Bords plus arrondis */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Ombre plus visible */
 }
 
 .video-container iframe {
@@ -189,41 +233,534 @@ footer {
 @media (max-width: 768px) {
     .navbar-nav {
         flex-direction: column;
+        align-items: center; /* Centrer les liens sur mobile */
     }
 
     .nav-link {
-        padding: 0.5rem 1rem;
-        margin: 5px 0;
-        width: auto;
+        padding: 0.7rem 1.5rem; /* Ajuster le padding sur mobile */
+        margin: 8px 0; /* Marge verticale plus importante */
+        width: 90%; /* Occuper plus de largeur sur mobile */
+        text-align: center; /* Centrer le texte des liens */
     }
-
+    .navbar-toggler {
+        margin: 0 auto; /* Centre horizontalement */
+        display: block; /* Assure-toi qu'il occupe toute la largeur disponible pour être centré */
+    }
+    
+    @media (min-width: 768px) {
+        .navbar-toggler {
+            display: none; /* Le cache sur les écrans plus grands où le menu est visible */
+        }
+    }
     .reseaux-sociaux {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row; /* Afficher les icônes en ligne sur mobile */
+        justify-content: center; /* Centrer les icônes */
     }
 
     .reseaux-sociaux a {
-        margin: 0.5rem 0;
+        margin: 0.7rem 1rem; /* Ajuster la marge des icônes */
     }
 
     #contact .col-md-8 {
-        padding: 0 1rem;
+        padding: 0 1.5rem; /* Ajuster le padding sur mobile */
     }
 
     .don-button {
-        width: 90%;
-        
-        
+        width: 95%; /* Occuper plus de largeur sur mobile */
+        padding: 16px 30px; /* Ajuster le padding sur mobile */
+        font-size: 1.2em; /* Ajuster la taille de la police sur mobile */
+    }
+
+    h2 {
+        font-size: 2.5rem; /* Réduire la taille des titres sur mobile */
+        margin-bottom: 2rem; /* Réduire la marge des titres sur mobile */
+    }
+
+    h2::after {
+        width: 70px; /* Réduire la largeur de la barre sur mobile */
+        height: 4px; /* Réduire la hauteur de la barre sur mobile */
+    }
+
+    .bienvenue-section {
+        padding: 30px 15px; /* Ajuster le padding sur mobile */
+    }
+
+    .bienvenue-titre {
+        font-size: 2.2em; /* Réduire la taille du titre de bienvenue */
+        margin-bottom: 8px;
+    }
+
+    .bienvenue-sous-titre {
+        font-size: 1.1em; /* Réduire la taille du sous-titre de bienvenue */
+        margin-bottom: 15px;
+    }
+
+    .presentation-titre {
+        font-size: 1.8em; /* Réduire la taille du titre de présentation */
+        margin-bottom: 15px;
+    }
+
+    .presentation-contenu {
+        flex-direction: column; /* Afficher le contenu de présentation en colonne sur mobile */
+        align-items: center; /* Centrer les éléments */
+    }
+
+    .presentation-texte {
+        flex-basis: 100%; /* Occuper toute la largeur */
+        text-align: center; /* Centrer le texte */
+        margin-bottom: 20px;
+    }
+
+    .presentation-image {
+        flex-basis: 100%; /* Occuper toute la largeur */
+    }
+
+    .objectifs-titre {
+        font-size: 1.8em; /* Réduire la taille du titre des objectifs */
+        margin-bottom: 15px;
+    }
+
+    .objectifs-liste {
+        flex-direction: column; /* Afficher les objectifs en colonne sur mobile */
+        align-items: center; /* Centrer les éléments */
+        gap: 20px;
+    }
+
+    .objectif {
+        flex-basis: 90%; /* Occuper plus de largeur */
+        padding: 15px;
+    }
+
+    .bureau-titre {
+        font-size: 1.8em; /* Réduire la taille du titre du bureau */
+        margin-bottom: 15px;
+    }
+
+    .membres-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Grille plus compacte */
+        gap: 15px;
+    }
+
+    .poles-titre {
+        font-size: 1.8em; /* Réduire la taille du titre des pôles */
+        margin-bottom: 15px;
+    }
+
+    .equipes-titre {
+        font-size: 1.8em; /* Réduire la taille du titre des équipes */
+        margin-bottom: 15px;
+    }
+
+    .cours-titre {
+        font-size: 1.8em; /* Réduire la taille du titre des cours */
+        margin-bottom: 15px;
+    }
+
+    .logo-section img {
+        max-width: 150px; /* Réduire la taille du logo sur mobile */
     }
 }
 
-/* Styles spécifiques pour les réseaux sociaux dans le contact */
-.social-title {
-    font-size: 1.2em; /* Augmente la taille du texte */
-    margin-bottom: 10px;
+/* Styles spécifiques pour la section "Bienvenue" (en haut) */
+.bienvenue-section {
+    background-color: #f8f0e3; /* Couleur de fond douce */
+    padding: 60px 20px; /* Padding plus important */
+    text-align: center;
 }
 
-.social-links a {
-    font-size: 1.1em; /* Augmente la taille des liens */
-    margin: 5px; /* Ajoute un peu d'espace autour des liens */
+.bienvenue-titre {
+    font-family: 'Playfair Display', serif; /* Police élégante pour le titre principal */
+    font-size: 3.5em; /* Titre très grand et impactant */
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+    line-height: 1.1;
 }
+
+.bienvenue-sous-titre {
+    font-family: 'Merriweather', serif; /* Police avec empattement pour le sous-titre */
+    font-size: 1.3em;
+    color: #555;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.bienvenue-message {
+    font-size: 1.15em;
+    color: #333;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto 20px;
+}
+
+/* Styles spécifiques pour la section "Présentation" */
+.presentation-section {
+    padding: 40px 20px; /* Padding plus important */
+}
+
+.presentation-titre {
+    font-size: 2.8em; /* Titre légèrement plus grand */
+    margin-bottom: 2.5rem; /* Marge plus importante */
+}
+
+.presentation-contenu {
+    gap: 30px; /* Espacement plus important entre texte et image */
+}
+
+.presentation-texte {
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+.presentation-image img {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Ombre plus prononcée pour l'image */
+}
+
+/* Styles spécifiques pour la section "Objectifs" */
+.objectifs-section {
+    background-color: #f0f8ff; /* Couleur de fond douce */
+    padding: 40px 20px; /* Padding plus important */
+}
+
+.objectifs-titre {
+    font-size: 2.8em; /* Titre légèrement plus grand */
+    margin-bottom: 2.5rem; /* Marge plus importante */
+}
+
+.objectif h3 {
+    font-family: 'Montserrat', sans-serif; /* Police moderne pour les sous-titres */
+    font-size: 1.5em;
+    color: #337ab7;
+    margin-bottom: 15px;
+    font-weight: 600;}
+
+    .objectif p {
+        font-size: 1.05em;
+        color: #555;
+        line-height: 1.7;
+    }
+    
+    /* Styles spécifiques pour la section "Notre Bureau" */
+    #bureau h2 {
+        margin-bottom: 35px; /* Marge plus importante */
+    }
+    
+    .membre-card {
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Ombre légèrement plus prononcée */
+    }
+    
+    .membre-info h5 {
+        font-size: 1.2rem;
+        margin-bottom: 8px;
+        color: #333;
+        font-weight: 600;
+    }
+    
+    .membre-info .poste {
+        font-style: italic;
+        color: #777;
+        font-size: 0.95rem;
+    }
+    
+    /* Styles spécifiques pour les sections "Pôles" et "Équipes" */
+    .poles-section,
+    .equipes-section {
+        padding: 40px 20px; /* Padding plus important */
+    }
+    
+    .poles-titre,
+    .equipes-titre {
+        font-size: 2.8em; /* Titre légèrement plus grand */
+        margin-bottom: 2.5rem; /* Marge plus importante */
+    }
+    
+    .pole h4,
+    .equipe h5 {
+        font-family: 'Montserrat', sans-serif; /* Police moderne pour les sous-titres */
+        font-size: 1.4em;
+        font-weight: 600;
+        margin-bottom: 12px;
+    }
+    
+    .pole p,
+    .equipe p {
+        font-size: 1.05em;
+        color: #555;
+        line-height: 1.7;
+    }
+    
+    /* Styles spécifiques pour la section "Cours" */
+    .cours-section {
+        padding: 40px 20px; /* Padding plus important */
+    }
+    
+    .cours-titre {
+        font-size: 2.8em; /* Titre légèrement plus grand */
+        margin-bottom: 2.5rem; /* Marge plus importante */
+    }
+    
+    .cours-info {
+        font-size: 1.1em;
+        color: #555;
+        margin-bottom: 20px;
+        line-height: 1.8;
+    }
+    
+    .cours-contact {
+        font-weight: 700;
+        color: #d2691e;
+        font-size: 1.1em;
+    }
+    
+    /* Styles spécifiques pour la section "Logo" */
+    .logo-section {
+        padding: 40px 20px; /* Padding plus important */
+    }
+    
+    /* Styles spécifiques pour les icônes et liens de contact (dans le footer) */
+    .icone-contact {
+        font-size: 1.3rem;
+        margin-right: 0.6rem;
+        color: #ddd; /* Couleur plus claire pour le footer */
+    }
+    
+    .lien-contact {
+        color: #ddd; /* Couleur plus claire pour le footer */
+    }
+    
+    .lien-contact:hover {
+        color: #fff; /* Couleur au survol dans le footer */
+    }
+    
+    /* Styles pour les icônes des pôles */
+    .icone-pole {
+        font-size: 1.7rem; /* Taille légèrement plus grande */
+        vertical-align: middle;
+        margin-right: 0.6rem;
+        color: #28a745; /* Couleur distinctive */
+    }
+/* Styles pour l'effet de survol du logo */
+.logo-link .logo-container {
+    transition: transform 0.3s ease-in-out; /* Ajoute une transition douce pour l'effet */
+}
+
+.logo-link:hover .logo-container {
+    transform: scale(1.1); /* Agrandit l'élément de 10% au survol */
+}
+
+/* Ajustements potentiels pour l'alignement si nécessaire */
+.navbar-brand-container {
+    display: flex;
+    align-items: center;
+}
+    /* Dans votre <style> ou styles.css */
+.contact-details i.icon-envelope {
+    color: #dc3545; /* Rouge */
+}
+
+.contact-details i.icon-phone {
+    color: #28a745; /* Vert */
+}
+
+.contact-details i.icon-geo {
+    color: #007bff; /* Bleu */
+}
+
+.social-media .bi-instagram {
+    color: #E4405F;
+}
+
+.social-media .bi-facebook {
+    color: #1877F2;
+}
+
+.social-media .bi-tiktok {
+    color: #000000;
+}
+
+.social-media .bi-linkedin {
+    color: #0A66C2;
+}
+
+/* Dans votre <style> ou styles.css */
+.event-title-wrapper i {
+    font-size: 2rem;
+    margin-right: 1rem;
+    vertical-align: middle; /* Aligne l'icône au milieu de la ligne */
+}
+
+.event-title-wrapper h2 {
+    display: inline-block; /* Permet l'alignement vertical */
+    vertical-align: middle; /* Aligne le titre au milieu de la ligne */
+    margin-bottom: 0; /* Supprime la marge par défaut du h2 qui pourrait affecter l'alignement */
+}
+
+/* Style pour le conteneur de l'image pour l'effet de transition */
+.logo-link .logo-container {
+    transition: transform 0.3s ease-in-out; /* Ajoute une transition douce */
+}
+
+/* Style pour l'effet de survol */
+.logo-link:hover .logo-container {
+    transform: scale(1.1); /* Agrandit l'icône de 10% au survol */
+}
+
+@media (max-width: 768px) {
+    /* ... autres styles ... */
+
+    .nav-link {
+        /* ... autres styles ... */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Bordure blanche semi-transparente en bas */
+
+    }
+
+    .nav-link:last-child {
+        border-bottom: none; /* Supprimer la bordure du dernier élément */
+    }
+
+    .dropdown-toggle {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Appliquer aussi au toggle du dropdown */
+        width: 100%
+    }
+
+    .dropdown-item {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* Bordure plus subtile dans le dropdown */
+        
+    }
+
+    .dropdown-item:last-child {
+        border-bottom: none;
+    }
+}
+
+/* styles.css */
+/* ... le reste de votre CSS ... */
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Empile la marque et la navigation */
+        align-items: center; /* Centre les éléments horizontalement */
+    }
+
+    .navbar-brand {
+        display: block; /* Prend toute la largeur */
+        text-align: center; /* Centre la marque */
+        margin-bottom: 0.5rem; /* Ajoute un peu d'espace en dessous */
+        width: 100%; /* Prend toute la largeur pour être centré */
+    }
+
+    .navbar-toggler {
+        display: block; /* Affiche le bouton sur mobile */
+        margin: 0.5rem auto; /* Centre le bouton */
+        width: fit-content; /* Ajuste la largeur au contenu */
+        padding: 0.5rem 1rem; /* Ajoute du padding au bouton */
+        border: 1px solid rgba(255, 255, 255, 0.2); /* Ajoute une bordure subtile */
+        border-radius: 5px;
+    }
+
+    .navbar-nav {
+        flex-direction: column; /* Affiche les liens en colonne */
+        align-items: stretch; /* Étire les liens sur toute la largeur */
+        margin-top: 0.5rem; /* Ajoute un peu d'espace au-dessus des liens */
+        width: 100%; /* Prend toute la largeur pour centrer les enfants */
+        display: flex; /* Active le flexbox pour centrer les éléments */
+        flex-direction: column; /* Les éléments en colonne */
+        align-items: center; /* Centre les éléments horizontalement */
+    }
+
+    .nav-item {
+        margin-left: 0; /* Supprime la marge à gauche */
+        margin-bottom: 0.25rem; /* Ajoute un peu d'espace entre les éléments */
+        width: 90%; /* Réduit légèrement la largeur pour les centrer avec un peu de marge */
+    }
+
+    .nav-link {
+        display: block; /* Important pour que le background prenne toute la largeur */
+        padding: 0.75rem 1.5rem; /* Augmente le padding pour faire de plus grands "boutons" */
+        margin: 0; /* Supprime les marges latérales */
+        border-radius: 5px; /* Bords légèrement moins arrondis pour l'aspect "bouton" */
+        text-align: center; /* Centre le texte dans le bouton */
+        font-size: 1.1rem; /* Conserve ou ajuste la taille de la police */
+        border-bottom: none; /* Supprime les bordures bas */
+        background-color: #36454F; /* Assure que le fond sombre est visible */
+        width: 100%; /* Assure que chaque lien prend toute la largeur de son parent (nav-item) */
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+        background-color: rgba(255, 255, 255, 0.2); /* Un fond légèrement plus clair au survol/actif */
+        color: #FF6347 !important;
+        transform: translateY(0); /* Supprime l'effet de translation au survol sur mobile */
+    }
+
+    .dropdown-toggle {
+        display: block;
+        width: 90%; /* Même largeur que les autres liens */
+        padding: 0.75rem 1.5rem;
+        text-align: center;
+        background-color: #36454F;
+        border-radius: 5px;
+        border-bottom: none;
+    }
+
+    .dropdown-menu {
+        position: static !important; /* Force l'affichage sous le bouton */
+        display: none; /* Initialement caché */
+        width: 90%; /* Même largeur que les autres liens */
+        padding: 0;
+        margin-top: 0.25rem;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        background-color: #36454F;
+    }
+
+    .dropdown-item {
+        display: block;
+        padding: 0.75rem 1.5rem;
+        text-align: center;
+        color: #E0FFFF !important;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .dropdown-item:last-child {
+        border-bottom: none;
+    }
+
+    .navbar-nav.show { /* Classe ajoutée par Bootstrap quand le menu est ouvert */
+        display: flex; /* S'assure que les éléments enfants (liens) s'affichent */
+        flex-direction: column; /* Assure l'affichage en colonne du dropdown */
+        align-items: center; /* Centre les éléments du dropdown */
+        width: 100%; /* Prend toute la largeur pour centrer */
+    }
+
+    .navbar-nav.show .nav-item,
+    .navbar-nav.show .dropdown-toggle,
+    .navbar-nav.show .dropdown-menu {
+        width: 90%; /* Applique la largeur aux éléments visibles du menu déroulant */
+    }
+
+    /* ... le reste de vos règles pour le responsive ... */
+}
+
+/* styles.css */
+/* ... le reste de votre CSS ... */
+
+@media (max-width: 768px) {
+    /* ... les règles précédentes ... */
+
+    .nav-item > .nav-link { /* Cibler directement le lien enfant du nav-item */
+        width: 100%; /* Forcer le lien à prendre toute la largeur du nav-item */
+    }
+
+    .dropdown-toggle {
+        width: 90%; /* S'assurer que le toggle garde sa largeur */
+    }
+
+    .dropdown-menu {
+        width: 90%; /* S'assurer que le menu déroulant garde sa largeur */
+    }
+
+    /* ... le reste de vos règles pour le responsive ... */
+}
+

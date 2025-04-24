@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Jeunesse Ballolé</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        .contact-details {
+            background-color: #f8f9fa; /* Gris clair Bootstrap */
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .contact-details h4 {
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .contact-details p {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.8rem;
+            color: #555;
+        }
+
+        .contact-details i {
+            font-size: 1.2rem;
+            margin-right: 0.8rem;
+            color: #007bff; /* Couleur primaire Bootstrap */
+        }
+
+        .social-media {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .social-media h5 {
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .social-media a {
+            font-size: 2rem;
+            margin: 0 0.8rem;
+            color: #333;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .social-media a:hover {
+            opacity: 0.8;
+        }
+
+        .social-media .bi-instagram:hover {
+            color: #E4405F;
+        }
+
+        .social-media .bi-facebook:hover {
+            color: #1877F2;
+        }
+
+        .social-media .bi-tiktok:hover {
+            color: #000000;
+        }
+
+        .social-media .bi-linkedin:hover {
+            color: #0077B5;
+        }
+
+        .contact-form {
+            background-color: #e9ecef; /* Gris très clair Bootstrap */
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .contact-form h4 {
+            color: #333;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-form .form-label i.form-icon {
+            margin-right: 0.5rem;
+        }
+
+        .contact-form .form-label i.icon-nom {
+            color: #007bff !important; /* Bleu */
+        }
+
+        .contact-form .form-label i.icon-prenom {
+            color: #28a745 !important; /* Vert */
+        }
+
+        .contact-form .form-label i.icon-email {
+            color: #dc3545 !important; /* Rouge */
+        }
+
+        .contact-form .form-label i.icon-sujet {
+            color: #ffc107 !important; /* Jaune */
+        }
+
+        .contact-form .form-label i.icon-message {
+            color: #6c757d !important; /* Gris */
+        }
+
+        .contact-form .btn-primary {
+            font-weight: bold;
+        }
+
+        .contact-form .don-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            color: #fff;
+            background-color: #007bff; /* Couleur primaire Bootstrap */
+            border: 1px solid #007bff;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form .don-button:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <div class="container">
+                <div class="navbar-brand-container d-flex align-items-center">
+                    <div class="logo-container me-2">
+                        <img src="logo.png" alt="Human'isa Logo" class="humanisa-logo rounded-circle" height="40" width="40" style="object-fit: cover;">
+                    </div>
+                    <a class="navbar-brand" href="index.html">
+                        Jeunesse Ballolé
+                    </a>
+                    <div class="navbar-brand-social ms-auto">
+                        <a href="https://www.facebook.com/people/Jeunesse-Ballole" target="_blank" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="https://www.instagram.com/jeunesse_ballole/" target="_blank" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" target="_blank" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" target="_blank" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                        <a href="#" target="_blank" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+                    </div>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="accueilDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Accueil
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="accueilDropdown">
+                                <li><a class="dropdown-item" href="index.html#presentation">Présentation</a></li>
+                                <li><a class="dropdown-item" href="index.html#bureau">Notre Bureau</a></li>
+                                <li><a class="dropdown-item" href="index.html#poles">Nos Pôles d'Action</a></li>
+                                <li><a class="dropdown-item" href="index.html#equipesSportives">Nos Équipes Sportives</a></li>
+                                <li><a class="dropdown-item" href="index.html#coursManjack">Cours de Manjack</a></li>
+                                <li><a class="dropdown-item" href="index.html#cotisations">Cotisations</a></li>
+                                <li><a class="dropdown-item" href="index.html#contact">Nos Contacts & Réseaux Sociaux</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="qui_sommes_nous.html">Qui sommes nous ?</a></li>
+                        <li class="nav-item"><a class="nav-link" href="evenements.html">Événements</a></li>
+                        <li class="nav-item"><a class="nav-link" href="nous_aider.html">Nous aider</a></li>
+                        <li class="nav-item"><a class="nav-link" href="news_du_projet.html">News du projet</a></li>
+                        <li class="nav-item"><a class="nav-link" href="l_histoire_Ballole.html">L'histoire d'Human'isa</a></li>
+                        <li class="nav-item"><a class="nav-link" href="nos_partenaires.html">Nos partenaires</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="contact_Ballole.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container my-5">
+        <section class="contact-section">
+            <h2 class="contact-title">Contactez la Jeunesse Ballolé</h2>
+            <p class="contact-intro">Nous sommes impatients de vous entendre ! Utilisez les informations ci-dessous ou le formulaire pour nous contacter.</p>
+
+            <div class="row">
+                <div class="col-md-6 contact-details">
+                    <h4>Informations de Contact</h4>
+                    <p><i class="bi bi-envelope-fill icon-envelope"></i> Email : <a href="mailto:contact@jeunesseballole.org">contact@jeunesseballole.org</a></p>
+                    <p><i class="bi bi-telephone-fill icon-phone"></i> Téléphone : +33 1 23 45 67 89</p>
+                    <p><i class="bi bi-geo-alt-fill icon-geo"></i> Adresse : 12 rue de Paris, 75000 Paris</p>
+                </div>
+
+                <div class="col-md-6 contact-form">
+                    <h4>Envoyez-nous un message</h4>
+                    <form action="#" method="post">
+                        <div class="mb-3">
+                            <label for="nom" class="form-label"><i class="bi bi-person me-2 form-icon icon-nom"></i>Nom</label>
+                            <input type="text" class="form-control" id="nom" name="nom" placeholder="Votre nom" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="prenom" class="form-label"><i class="bi bi-person-fill me-2 form-icon icon-prenom"></i>Prénom</label>
+                            <input type="text" class="form-control" id="prenom" name="prenom" placeholder="Votre prénom" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label"><i class="bi bi-envelope me-2 form-icon icon-email"></i>Email</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Votre adresse mail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="sujet" class="form-label"><i class="bi bi-question-circle me-2 form-icon icon-sujet"></i>Je souhaite :</label>
+                            <select class="form-select" id="sujet" name="sujet" required>
+                                <option value="" selected>Choisir une option</option>
+                                <option value="don_financier">Faire un don financier (question)</option>
+                                <option value="don_materiel">Proposer un don matériel</option>
+                                <option value="don_imateriel">Proposer un don immatériel (bénévolat, compétences)</option>
+                                <option value="question_general">Poser une question générale</option>
+                                <option value="probleme_site">Signaler un problème sur le site</option>
+                                <option value="autre">Autre sujet</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label"><i class="bi bi-pencil-square me-2 form-icon icon-message"></i>Message</label>
+                            <textarea class="form-control" id="message" name="message" rows="4" placeholder="Votre message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary"><i class="bi bi-send me-2"></i>Envoyer</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="social-media">
+                <h5>Retrouvez-nous aussi sur les réseaux sociaux !</h5>
+                <a href="https://www.instagram.com/jeunesse_ballole/" target="_blank" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.facebook.com/share/15HXA5gqVE/?mibextid=wwXIfr" target="_blank" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.tiktok.com/@jeunesse.ballole?_t=ZN-8vmyh37b3QM&_r=1" target="_blank" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+                <a href="https://www.linkedin.com/company/jeunesse-ballole/" target="_blank" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2024 Jeunesse Ballolé</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'histoire de Ballolé - Jeunesse Ballolé</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .history-section {
+            padding: 2rem 0;
+        }
+
+        .history-section h3 {
+            color: #007bff; /* Couleur primaire Bootstrap */
+            margin-bottom: 1rem;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 1rem 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 2px;
+            background-color: #dee2e6; /* Gris clair Bootstrap */
+            transform: translateX(-50%);
+        }
+
+        .timeline-entry {
+            position: relative;
+            width: 50%;
+            margin-bottom: 1.5rem;
+            padding-right: 2rem;
+        }
+
+        .timeline-entry:nth-child(odd) {
+            padding-left: 2rem;
+            padding-right: 0;
+            text-align: right;
+        }
+
+        .timeline-entry::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 0;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #007bff;
+            transform: translateX(-50%);
+        }
+
+        .timeline-entry:nth-child(odd)::before {
+            left: auto;
+            right: 0;
+            transform: translateX(50%);
+        }
+
+        .timeline-entry h4 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        .timeline-entry p {
+            color: #555;
+            font-size: 0.95em;
+        }
+
+        /* Responsive timeline */
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 10px;
+            }
+
+            .timeline-entry {
+                width: 100%;
+                padding-left: 2.5rem;
+                padding-right: 0 !important;
+                text-align: left !important;
+            }
+
+            .timeline-entry::before {
+                left: 10px;
+                transform: translateX(-50%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <div class="container">
+                <div class="navbar-brand-container d-flex align-items-center">
+                    <div class="logo-container me-2">
+                        <img src="logo.png" alt="Ballolé Logo" class="humanisa-logo rounded-circle" height="40" width="40" style="object-fit: cover;">
+                    </div>
+                    <a class="navbar-brand" href="index.html">
+                        Jeunesse Ballolé
+                    </a>
+                    <div class="navbar-brand-social ms-auto">
+                        <a href="https://www.facebook.com/share/15HXA5gqVE/?mibextid=wwXIfr target="_blank" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="https://www.instagram.com/jeunesse_ballole/" target="_blank" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" target="_blank" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" target="_blank" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                        <a href="https://www.tiktok.com/@jeunesse.ballole?_t=ZN-8vmyh37b3QM&_r=1" target="_blank" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+                    </div>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="accueilDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Accueil
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="accueilDropdown">
+                                <li><a class="dropdown-item" href="index.html#presentation">Présentation</a></li>
+                                <li><a class="dropdown-item" href="index.html#bureau">Notre Bureau</a></li>
+                                <li><a class="dropdown-item" href="index.html#poles">Nos Pôles d'Action</a></li>
+                                <li><a class="dropdown-item" href="index.html#equipesSportives">Nos Équipes Sportives</a></li>
+                                <li><a class="dropdown-item" href="index.html#coursManjack">Cours de Manjack</a></li>
+                                <li><a class="dropdown-item" href="index.html#cotisations">Cotisations</a></li>
+                                <li><a class="dropdown-item" href="index.html#contact">Nos Contacts & Réseaux Sociaux</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="qui_sommes_nous.html">Qui sommes nous ?</a></li>
+                        <li class="nav-item"><a class="nav-link" href="evenements.html">Événements</a></li>
+                        <li class="nav-item"><a class="nav-link" href="nous_aider.html">Nous Aider</a></li>
+                        <li class="nav-item"><a class="nav-link" href="news_du_projet.html">News du projet</a></li>
+                        <li class="nav-item"><a class="nav-link" href="l_histoire_Ballole.html">Notre Histoire</a></li>
+                        <li class="nav-item"><a class="nav-link" href="nos_partenaires.html">Nos partenaires</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact_Ballole.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container my-5">
+        <section class="history-section">
+            <h2>L'histoire de Ballolé</h2>
+            <p class="lead">Découvrez le parcours inspirant de la Jeunesse Ballolé, de sa création à aujourd'hui.</p>
+        </section>
+
+        <section class="history-section">
+            <h3>Nos Origines</h3>
+            <p>Ici, racontez comment l'association a été fondée, qui sont les fondateurs et quelle était leur vision initiale. Expliquez le contexte et les motivations derrière la création de la Jeunesse Ballolé.</p>
+        </section>
+
+        <section class="history-section">
+            <h3>Les Premières Étapes</h3>
+            <p>Décrivez les premières actions et initiatives de l'association. Quels ont été les premiers défis et comment ont-ils été surmontés ? Mentionnez les premiers succès et les moments marquants des débuts.</p>
+        </section>
+
+        <section class="history-section">
+            <h3>Notre Développement</h3>
+            <p>Parlez de la croissance de l'association au fil des ans. Comment vos pôles d'action se sont-ils développés ? Avez-vous élargi votre champ d'action ou vos partenariats ? Mettez en lumière les projets importants qui ont marqué cette période.</p>
+        </section>
+
+        <section class="history-section">
+            <h3>Moments Clés et Réalisations</h3>
+            <div class="timeline">
+                <div class="timeline-entry">
+                    <h4>[Année] : Événement Marquant 1</h4>
+                    <p>[Description de l'événement et de son impact.]</p>
+                </div>
+                <div class="timeline-entry">
+                    <h4>[Année] : Projet Important 1</h4>
+                    <p>[Description du projet et de ses résultats.]</p>
+                </div>
+                <div class="timeline-entry">
+                    <h4>[Année] : Événement Marquant 2</h4>
+                    <p>[Description de l'événement et de son impact.]</p>
+                </div>
+                </div>
+        </section>
+
+        <section class="history-section">
+            <h3>Aujourd'hui et Demain</h3>
+            <p>Présentez la situation actuelle de la Jeunesse Ballolé, vos principaux objectifs et vos projets futurs. Quelle est votre vision pour l'avenir et comment comptez-vous continuer à impacter positivement la jeunesse de Ballolé ?</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Jeunesse Ballolé</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
