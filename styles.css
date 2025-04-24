@@ -813,6 +813,27 @@ footer {
 /* styles.css */
 /* ... le reste de votre CSS ... */
 
+
+
+@media (max-width: 767.98px) {
+    #bureau .section-title {
+        font-size: 2.0em; /* Réduisez légèrement si c'est trop grand */
+    }
+    .membre-info h5 {
+        font-size: 1.2em; /* Ajustez si nécessaire */
+    }
+    .membre-info p {
+        font-size: 1.2em; /* Augmentez légèrement */
+    }
+    .nom-important h4 {
+        font-size: 1.8em; /* Ajustez si nécessaire */
+    }
+    .nom-important p {
+        font-size: 1.2em; /* Augmentez légèrement */
+    }
+}
+
+
 @media (max-width: 768px) {
     /* ... les règles précédentes ... */
 

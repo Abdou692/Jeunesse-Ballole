@@ -434,16 +434,15 @@
 </section>
 
 <style>
-
- #bureau .section-title {
-    font-family: 'VotrePolice', sans-serif;
-    font-size: 2.2em;
-    color:rgb(2, 2, 177);
-    text-align: center;
-    margin-bottom: 2rem; /* Conserver ou ajuster la marge du bas */
-    text-transform: uppercase;
-    padding-bottom: 0.5rem;
-}
+    #bureau .section-title {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Police moderne et lisible */
+        font-size: 2.2em; /* Ajustez la taille si nécessaire */
+        color: rgb(2, 2, 177);
+        text-align: center;
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+        padding-bottom: 0.5rem;
+    }
 
     .bureau-grid {
         display: grid;
@@ -495,25 +494,27 @@
     }
 
     .membre-info h5 {
-        font-family: 'Luckiest Guy', cursive;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Autre police standard et lisible */
         font-size: 1.4em;
         color: #28a745;
         margin-bottom: 0.5rem;
     }
 
     .membre-info p {
-        font-family: 'Handlee', cursive;
+        font-family: 'Arial', sans-serif; /* Police très courante */
         font-size: 1.1em;
         color: #495057;
         margin-bottom: 0.3rem;
     }
 
     .membre-info .poste {
+        font-family: 'Georgia', serif; /* Police serif classique */
         font-style: italic;
         color: #6c757d;
     }
 
     .membre-info .contact {
+        font-family: 'Arial', sans-serif;
         font-weight: bold;
         color: #007bff;
     }
@@ -529,14 +530,33 @@
     }
 
     .nom-important h4 {
-        font-family: 'Creepster', cursive;
-        font-size: 2em;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Utilisation d'une police lisible */
+        font-size: 1.8em; /* Ajustez la taille si nécessaire */
         margin-bottom: 0.5rem;
     }
 
     .nom-important p {
-        font-family: 'Handlee', cursive;
+        font-family: 'Arial', sans-serif;
         font-size: 1.1em;
+    }
+
+    /* Ajustements potentiels pour la taille de police en responsive (si le problème persiste) */
+    @media (max-width: 767.98px) {
+        #bureau .section-title {
+            font-size: 2.0em;
+        }
+        .membre-info h5 {
+            font-size: 1.3em;
+        }
+        .membre-info p {
+            font-size: 1.2em;
+        }
+        .nom-important h4 {
+            font-size: 1.6em;
+        }
+        .nom-important p {
+            font-size: 1.2em;
+        }
     }
 </style>
 
@@ -752,7 +772,7 @@
                         <h5 class="mb-3 text-center text-md-start" style="color: #ffc107;"><i class="bi bi-share-fill me-2"></i> <span style="font-size: 1.2rem;">Suivez-nous sur nos Réseaux Sociaux</span></h5>
                         <ul class="list-unstyled text-center text-md-start">
                             <li class="mb-2">
-                                <a href="https://www.facebook.com/people/Jeunesse-Ballol%C3%A9/" target="_blank" class="text-decoration-none text-light d-flex align-items-center justify-content-center justify-content-md-start">
+                                <a href="https://www.facebook.com/share/15HXA5gqVE/?mibextid=wwXIfr" target="_blank" class="text-decoration-none text-light d-flex align-items-center justify-content-center justify-content-md-start">
                                     <span style="width: 7em; text-align: left; margin-right: 0.3em;">Facebook</span>
                                     <div style="width: 1em; text-align: center;">
                                         <i class="bi bi-arrow-right-circle-fill align-middle" style="color: #ffc107;"></i>
@@ -779,7 +799,7 @@
                                 </a>
                             </li>
                             <li class="mb-2">
-                                <a href="#" target="_blank" class="text-decoration-none text-light d-flex align-items-center justify-content-center justify-content-md-start">
+                                <a href="https://www.tiktok.com/@jeunesse.ballole?_t=ZN-8vmyh37b3QM&_r=1" target="_blank" class="text-decoration-none text-light d-flex align-items-center justify-content-center justify-content-md-start">
                                     <span style="width: 7em; text-align: left; margin-right: 0.3em;">TikTok</span>
                                     <div style="width: 1em; text-align: center;">
                                         <i class="bi bi-arrow-right-circle-fill align-middle" style="color: #ffc107;"></i>
