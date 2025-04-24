@@ -76,8 +76,14 @@
             vertical-align: middle;
         }
 
+        /* Styles pour les titres de section */
+        h2.section-title {
+            text-align: center;
+            margin-bottom: 4px;
+        }
+
         /* Styles pour la section "Notre Bureau" - Conservés */
-        #bureau h2 { text-align: center; margin-bottom: 30px; color: #333; }
+        #bureau h2 { margin-bottom: 30px; color: #333; }
         .bureau-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
         .membre-card { background-color: #f9f9f9; border-radius: 8px; padding: 20px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); display: flex; align-items: center; gap: 15px; }
         .membre-card .photo-container { width: 70px; height: 70px; border-radius: 50%; overflow: hidden; border: 2px solid #ddd; }
@@ -97,40 +103,82 @@
         .nom-important p { font-size: 0.9rem; color: #2c6a71; line-height: 1.5; }
 
         /* Styles pour la section "Nos Pôles d'Action" - Conservés */
-        #poles h2 { text-align: center; margin-bottom: 4px; }
         #poles .card-body { display: flex; flex-direction: column; align-items: center; text-align: center; }
         #poles .card-title { margin-top: 10px; }
         #poles i { font-size: 2rem !important; }
 
         /* Styles pour la section "Nos Équipes Sportives" - Conservés */
-        #equipesSportives h2 { text-align: center; margin-bottom: 4px; }
         #equipesSportives .card-body { text-align: center; }
 
         /* Styles pour la section "Cours de Manjack" - Conservés */
-        #coursManjack h2 { text-align: center; margin-bottom: 4px; }
         #coursManjack p { text-align: center; }
 
+        /* Styles pour la section "Soutenez-nous" */
+        #soutenez-nous {
+            text-align: center;
+            padding: 30px 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        #soutenez-nous .objectif {
+            background-color: #e9ecef;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 1.5rem;
+        }
+
+        #soutenez-nous .objectif strong {
+            font-size: 1.3rem;
+            color: #007bff; /* Bleu pour l'objectif */
+        }
+
+        #soutenez-nous .plan-financement {
+            margin-bottom: 1.5rem;
+        }
+
+        #soutenez-nous .plan-financement h4 {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        #soutenez-nous .plan-financement ul {
+            list-style: none;
+            padding-left: 0;
+            text-align: left;
+        }
+
+        #soutenez-nous .plan-financement ul li {
+            margin-bottom: 0.3rem;
+            color: #777;
+        }
+
+        #soutenez-nous .btn-faire-don {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease;
+            border: none;
+        }
+
+        #soutenez-nous .btn-faire-don:hover {
+            background-color: #1e7e34;
+        }
+
         /* Styles pour la section "Cotisations" - Conservés */
-        #cotisations h2 { text-align: center; margin-bottom: 4px; }
         #cotisations p { text-align: center; }
 
-        /* Styles pour la section "Contactez-nous & Suivez-nous" - Légèrement modifiés */
-        #contact h2 { text-align: center; margin-bottom: 2rem; }
-        #contact p { text-align: center; margin-bottom: 1rem; }
-        #contact .contact-info { text-align: center; margin-bottom: 2rem; }
-        #contact .contact-info p { display: block; } /* Pour que les icônes et le texte soient sur la même ligne par défaut */
-        #contact .contact-info i { font-size: 1.2rem; margin-right: 0.5rem; color: #007bff; }
-        #contact .social-links { text-align: center; margin-top: 1.5rem; }
-        #contact .social-links a { font-size: 2rem; margin: 0 0.5rem; color: #333; text-decoration: none; }
-        #contact .social-links a:hover { opacity: 0.8; }
-        #contact .social-links .bi-instagram { color: #E4405F; }
-        #contact .social-links .bi-facebook { color: #1877F2; }
-        #contact .social-links .bi-tiktok { color: #000000; }
-        #contact .social-links .bi-linkedin { color: #0077B5; }
-
         /* Styles pour le footer inspiré de l'image */
-        .bg-light {
-            background-color: #f8f9fa !important;
+        .bg-primary {
+            background-color: #2c3e50 !important; /* Un bleu foncé chaleureux - vous pouvez le changer */
         }
 
         .py-4 {
@@ -151,8 +199,8 @@
             text-decoration: none !important;
         }
 
-        .text-dark {
-            color: #212529 !important;
+        .text-light {
+            color: #f8f9fa !important;
         }
 
         .me-2 {
@@ -195,7 +243,7 @@
                     <a class="navbar-brand ms-2" href="index.html" style="font-size: 1.5rem;">
                         Jeunesse Ballolé
                     </a>
-                    <div class="navbar-brand-social ms-auto">
+                    <div class="navbar-brand-social ms-auto d-none d-md-flex">
                         <a href="https://www.facebook.com/share/15HXA5gqVE/?mibextid=wwXIfr" target="_blank" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
                         <a href="https://www.instagram.com/jeunesse_ballole/" target="_blank" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
                         <a href="#" target="_blank" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
@@ -218,8 +266,8 @@
                                 <li><a class="dropdown-item" href="index.html#poles">Nos Pôles d'Action</a></li>
                                 <li><a class="dropdown-item" href="index.html#equipesSportives">Nos Équipes Sportives</a></li>
                                 <li><a class="dropdown-item" href="index.html#coursManjack">Cours de Manjack</a></li>
+                                <li><a class="dropdown-item" href="index.html#soutenez-nous">Soutenez-nous</a></li>
                                 <li><a class="dropdown-item" href="index.html#cotisations">Cotisations</a></li>
-                                <li><a class="dropdown-item" href="index.html#contact">Nos Contacts & Réseaux Sociaux</a></li>
                             </ul>
                         </li>
                         <li class="nav-item"><a class="nav-link" href="qui_sommes_nous.html">Qui sommes nous ?</a></li>
@@ -231,299 +279,525 @@
                         <li class="nav-item"><a class="nav-link" href="contact_Ballole.html">Contact</a></li>
                     </ul>
                 </div>
+                <div class="navbar-brand-social ms-auto d-md-none mt-2">
+                    <a href="https://www.facebook.com/share/15HXA5gqVE/?mibextid=wwXIfr" target="_blank" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.instagram.com/jeunesse_ballole/" target="_blank" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="#" target="_blank" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" target="_blank" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                    <a href="https://www.tiktok.com/@jeunesse.ballole?_t=ZN-8vmyh37b3QM&_r=1" target="_blank" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+                </div>
             </div>
         </nav>
     </header>
 
     <main class="container my-5">
-        <section id="presentation" class="mb-5">
-            <h2 class="text-center mb-4">Qui sommes-nous ? / Notre histoire : L'Écho de Ballolé</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <p>Imaginez un lieu où les racines murmurent des histoires de villages unis, où l'esprit de Ballolé résonne avec la force d'un seul cœur. Notre association est ce point de rencontre vibrant, unissant les jeunes de la diaspora Guinée Bissauienne, dont les origines plongent dans la fertile terre de Ballolé. Car ici, Capol et Badjopi ne font qu'un, tissant une identité commune, un "former qu'un" qui pulse dans nos veines.</p>
-                    <p>L'épopée a commencé en 1990, sous l'étendard de Ballolé Union en France. Une génération passionnée, nos aînés, s'était alors dressée pour confier à leurs enfants les trésors de nos valeurs et la richesse de notre patrimoine. Leur flamme a illuminé nos premiers pas.</p>
-                    <p>Le temps a filé, laissant une douce absence... mais l'appel du village, l'écho de Ballolé, est resté puissant. Aujourd'hui, une nouvelle vague de jeunes, héritiers de cette histoire, a repris le flambeau avec une énergie renouvelée. Nous sommes plus de 90 adhérents, un kaléidoscope de talents et d'idées, unis par ce lien intergénérationnel et interculturel qui est notre sève.</p>
-                    <h3 class="mt-3">Notre Mission : Semer l'Avenir, Cultiver nos Racines</h3>
-                    <p>Notre cœur bat à l'unisson de deux aspirations :</p>
-                    <ul>
-                        <li><strong>Rassembler :</strong> Créer des ponts joyeux entre tous les jeunes Ballolé de France, tissant des liens d'amitié et de partage. Et au-delà, embraser la communauté Manjack autour d'événements où la culture et la fête dansent ensemble.</li>
-                        <li><strong>Révéler :</strong> Offrir au monde le spectacle de notre culture, la mélodie de notre langue, la profondeur de notre histoire. Être les ambassadeurs d'une identité riche et fascinante.</li>
-                        <li><strong>Déployer :</strong> Être les artisans d'un avenir meilleur pour nos villages, Kapual et Bajopi, et pour notre magnifique Guinée Bissau. Ensemble, imaginons et développons des projets porteurs d'espoir, en semant les graines de la solidarité.</li>
-                    </ul>
-                </div>
-                <div class="col-md-6">
-                    <div class="video-container">
-                        <iframe width="560" height="315src="https://www.youtube.com/embed/VOTRE_VIDEO_ID" title="Vidéo de présentation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <section id="bureau" class="mb-5">
-            <h2 class="text-center mb-4">Notre Bureau</h2>
-            <div class="bureau-grid">
-                <div class="membre-card">
-                    <div class="photo-container">
-                        <img src="images/membre1.jpg" alt="Felix Mendy">
-                    </div><div class="membre-info">
-                        <h5>Felix Mendy</h5>
-                        <p class="poste">Président</p>
-                    </div>
-                </div>
-                <div class="membre-card">
-                    <div class="photo-container">
-                        <img src="images/membre2.jpg" alt="Anna Gomis">
-                    </div>
-                    <div class="membre-info">
-                        <h5>Anna Gomis</h5>
-                        <p class="poste">Vice-Présidente</p>
-                    </div>
-                </div>
-                <div class="membre-card">
-                    <div class="photo-container">
-                        <img src="images/membre_aurelia.jpg" alt="Aurélia Mendy">
-                    </div>
-                    <div class="membre-info">
-                        <h5>Aurélia Mendy</h5>
-                        <p class="poste">Secrétaire</p>
-                    </div>
-                </div>
-                <div class="membre-card">
-                    <div class="photo-container">
-                        <img src="images/membre_vacant.jpg" alt="Poste Vacant">
-                    </div>
-                    <div class="membre-info">
-                        <h5>Poste Vacant</h5>
-                        <p class="poste">Secrétaire-Adjointe</p>
-                    </div>
-                </div>
-                <div class="membre-card">
-                    <div class="photo-container">
-                        <img src="images/membre3.jpg" alt="Samuel Mendy">
-                    </div>
-                    <div class="membre-info">
-                        <h5>Samuel Mendy</h5>
-                        <p class="poste">Trésorier</p>
-                    </div>
-                </div>
-                <div class="membre-card">
-                    <div class="photo-container">
-                        <img src="images/membre_fatou.jpg" alt="Fatou Vaz">
-                    </div>
-                    <div class="membre-info">
-                        <h5>Fatou Vaz</h5>
-                        <p class="poste">Trésorière-Adjointe</p>
-                    </div>
-                </div>
-                <div class="membre-card responsables-card">
-                    <div class="photo-container">
-                        <div class="mini-photo"><img src="images/membre_nadege_laurent.jpg" alt="Nadège"></div>
-                        <div class="mini-photo"><img src="images/membre_nadege_laurent.jpg" alt="Laurent"></div>
-                    </div>
-                    <div class="membre-info">
-                        <h5>Nadège et Laurent</h5>
-                        <p>Responsables du Pôle Événementiel</p>
-                        <p>Contact Nadège : 06 26 70 47 61</p>
-                        <p>Contact Laurent : 06 05 68 59 55</p>
-                    </div>
-                </div>
-                <div class="membre-card responsables-card">
-                    <div class="photo-container">
-                        <div class="mini-photo"><img src="images/membre_aurelia.jpg" alt="Aurélia"></div>
-                        <div class="mini-photo"><img src="images/membre2.jpg" alt="Anna"></div>
-                    </div>
-                    <div class="membre-info">
-                        <h5>Aurélia et Anna</h5><p>Responsables du Pôle Animation</p>
-                    </div>
-                </div>
-                <div class="membre-card representant-card">
-                    <div class="photo-container">
-                        <img src="images/membre_olivera.jpg" alt="Olivera Mendes">
-                    </div>
-                    <div class="membre-info">
-                        <h5>Olivera Mendes</h5>
-                        <p>Représentant des membres</p>
-                        <p class="contact">07 62 98 80 65</p>
-                    </div>
-                </div>
-                <div class="membre-card">
-                    <div class="photo-container">
-                        <img src="images/membre_melinda.jpg" alt="Mélinda Gomis">
-                    </div>
-                    <div class="membre-info">
-                        <h5>Mélinda Gomis</h5>
-                        <p>Responsable du Pôle Communication</p>
-                    </div>
-                </div>
-                <div class="membre-card">
-                    <div class="photo-container">
-                        <img src="images/membre_elisabeth_agnes.jpg" alt="Elisabeth Gomis">
-                    </div>
-                    <div class="membre-info">
-                        <h5>Elisabeth Gomis</h5>
-                        <p>Responsable du Pôle Humanitaire</p>
-                    </div>
-                </div>
-                <div class="nom-important">
-                    <h4>Un NOM IMPORTANT À CONNAÎTRE ...</h4>
-                    <p>Le représentant des membres est une personne à qui tu peux te confier sur des points positifs comme négatifs concernant tout types de sujets en rapport avec l'association... N'hésite pas à le solliciter en cas de problème !</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="poles" class="mb-5">
-            <h2 class="text-center mb-4">Nos Pôles d'Action</h2>
-            <div class="row row-cols-1 row-cols-md-2 g-4">
-                <div class="col">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <i class="bi bi-star-fill text-warning mb-3" style="font-size: 2rem;"></i>
-                            <h5 class="card-title">Pôle Événementiel</h5>
-                            <p class="card-text">Organisation des événements, recherche de salles, contact de prestataires, gestion logistique.</p>
-                            <p class="card-text"><strong>Contact :</strong> Nadège (06 26 70 47 61) ou Laurent (06 05 68 59 55)</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <i class="bi bi-children-fill text-info mb-3" style="font-size: 2rem;"></i>
-                            <h5 class="card-title">Pôle Animation</h5>
-                            <p class="card-text">Organisation d'activités pour enfants/adolescents et adhérents.</p>
-                            <p class="card-text"><strong>Contact :</strong> Aurélia (07 64 29 19 77) ou Anna (06 46 29 86 43)</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <i class="bi bi-megaphone-fill text-primary mb-3" style="font-size: 2rem;"></i>
-                            <h5 class="card-title">Pôle Communication</h5>
-                            <p class="card-text">Gestion de la communication sur tous supports (réseaux sociaux, etc.).</p>
-                            <p class="card-text"><strong>Contact :</strong> Nadège (06 26 70 47 61) ou Laurent (06 05 68 59 55)</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <i class="bi bi-heart-fill text-danger mb-3" style="font-size: 2rem;"></i>
-                            <h5 class="card-title">Pôle Humanitaire</h5>
-                            <p class="card-text">Mise en place d'actions solidaires locales et en Guinée Bissau, aide à la recherche d'emploi.</p>
-                            <p class="card-text"><strong>Contact :</strong> Mélinda (07 60 38 99 83), Elisabeth (07 62 12 91 10) ou Agnès (07 53 90 63 84)</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <p class="mt-3">Pour intégrer un pôle, contacte le responsable concerné. Il est possible d’intégrer plusieurs pôles. N'oubliez pas que votre inscription implique votre participation à l'organisation du pôle.</p>
-        </section>
-
-        <section id="equipesSportives" class="mb-5">
-            <h2 class="text-center mb-4">Nos Équipes Sportives</h2>
-            <div class="row row-cols-1 row-cols-md-2 g-4">
-                <div class="col">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title">FC Ballolé (Football)</h5>
-                            <p class="card-text">Participez à des matchs et tournois ! Pas d’âge ou de niveau requis.</p>
-                            <p class="card-text"><strong>Contact :</strong> Laurent (06 05 68 59 55) ou Pierrot (07 67 02 43 45)</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title">Basket AJB</h5>
-                            <p class="card-text">Rejoignez l'équipe de basket ! Pas d’âge ou de niveau requis.</p>
-                            <p class="card-text"><strong>Contact :</strong> Wannie (06 46 36 37 24) ou Damien (06 65 42 33 52)</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="coursManjack" class="mb-5">
-            <h2 class="text-center mb-4">Cours de Manjack</h2>
-            <p class="text-center">Cours de manjack gratuits pour tous les adhérents dispensés par Etienne et Eric (2 à 3 fois par mois en distanciel ou présentiel).</p>
-            <p class="text-center">Apprenez les bases pour tenir des conversations aisément.</p>
-            <p class="text-center"><strong>Pour s’inscrire, contactez le président :</strong> 06 58 05 69 49</p>
-            <p class="text-center"><a href="#">Règlement des cours de Manjack (PAGE 9 à 11 du guide)</a></p>
-        </section>
-
-        <section id="cotisations" class="mb-5">
-            <h2 class="text-center mb-4">Cotisations</h2>
-            <p class="text-center">Nous fonctionnons par année scolaire (septembre à septembre).</p>
-            <p class="text-center">Cotisation annuelle : 50€ (30€ pour les mineurs).</p><p class="text-center">Prochaine cotisation : à partir de septembre. Vous avez 1 an pour re-cotiser (du 1er septembre 2024 au 31 août 2025 pour l'année prochaine).</p>
-            <p class="text-center"><strong>Retard de paiement :</strong> Majoration de 30%.</p>
-        </section>
-
-        <section id="contact" class="mb-5">
-            <h2 class="text-center mb-4">Contactez-nous & Suivez-nous</h2>
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <div class="contact-info mb-4">
-                        <p><i class="bi bi-envelope-fill text-secondary me-2" style="font-size: 1.2rem;"></i> Email : <a href="mailto:contact@jeunesseballole.org">contact@jeunesseballole.org</a></p>
-                        <p><i class="bi bi-telephone-fill text-secondary me-2" style="font-size: 1.2rem;"></i> Téléphone : +33 1 23 45 67 89</p>
-                        <p><i class="bi bi-geo-alt-fill text-secondary me-2" style="font-size: 1.2rem;"></i> Adresse : 12 rue de Paris, 75000 Paris</p>
-                    </div>
-                    <h4 class="text-center mb-3">Suivez-nous sur nos réseaux sociaux :</h4>
-                    <div class="social-links d-flex justify-content-center gap-3">
-                        <a href="https://www.instagram.com/jeunesse_ballole/" target="_blank" aria-label="Instagram" style="text-decoration: none; font-size: 2rem; color: #E4405F;">
-                            <i class="bi bi-instagram"></i>
-                        </a>
-                        <a href="https://www.facebook.com/people/Jeunesse-Ballol%C3%A9/pfbid02TNpRvSrAufSraMdHpdbu8ybPTfYKE1DMzNqxLr9chwfDW7prBFFrKoATiT3HH2SGl/?mibextid=wwXIfr&rdid=cSWmkS7jn0jGZAiJ&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F16K72VVJzr%2F%3Fmibextid%3DwwXIfr" target="_blank" aria-label="Facebook" style="text-decoration: none; font-size: 2rem; color: #1877F2;">
-                            <i class="bi bi-facebook"></i>
-                        </a>
-                        <a href="#" target="_blank" aria-label="TikTok" style="text-decoration: none; font-size: 2rem; color: #000000;">
-                            <i class="bi bi-tiktok"></i>
-                        </a>
-                        <a href="#" target="_blank" aria-label="LinkedIn" style="text-decoration: none; font-size: 2rem; color: #0077B5;">
-                            <i class="bi bi-linkedin"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="bg-primary text-light py-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h5 class="mb-3">Nous Contacter</h5>
-                    <p>Email: <a href="mailto:contact@jeunesseballole.org" class="text-decoration-none text-light">contact@jeunesseballole.org</a></p>
-                    <p>Téléphone (Président actuel): <a href="tel:[Numéro de téléphone du président]" class="text-decoration-none text-light">[Numéro de téléphone du président]</a></p>
-                    <p>Vous avez une question ? N'hésitez pas à nous écrire !</p>
-                </div>
-                <div class="col-md-4">
-                    <h5 class="mb-3">Nous Trouver</h5>
-                    <p class="text-light"><strong>Siège Social :</strong></p>
-                    <p class="text-light">[Adresse de l'association]</p>
-                    <p class="text-light">France</p>
-                </div>
-                <div class="col-md-4">
-                    <h5 class="mb-3">Suivez-nous</h5>
-                    <p>Restez connectés avec la Jeunesse Ballolé !</p>
-                    <ul class="list-unstyled d-flex gap-3">
-                        <li><a href="https://www.instagram.com/jeunesse_ballole/" target="_blank" class="text-decoration-none text-light"><i class="bi bi-instagram fs-4"></i></a></li>
-                        <li><a href="https://www.facebook.com/people/Jeunesse-Ballol%C3%A9/" target="_blank" class="text-decoration-none text-light"><i class="bi bi-facebook fs-4"></i></a></li>
-                        <li><a href="#" target="_blank" class="text-decoration-none text-light"><i class="bi bi-linkedin fs-4"></i></a></li>
-                        <li><a href="#" target="_blank" class="text-decoration-none text-light"><i class="bi bi-youtube fs-4"></i></a></li>
-                        <li><a href="#" target="_blank" class="text-decoration-none text-light"><i class="bi bi-tiktok fs-4"></i></a></li>
-                    </ul>
-                    <div class="mt-3">
-                        <a href="https://www.helloasso.com/associations/jeunesse-ballole/faire-un-don" target="_blank" class="btn btn-outline-light btn-sm">Faire un don</a>
-                    </div>
-                </div>
-            </div>
-            <hr class="my-4">
-            <div class="text-center text-light">
-                <p>© 2024 Jeunesse Ballolé. Tous droits réservés.</p>
-                <p class="small">Réalisé avec <i class="bi bi-heart-fill text-danger"></i> par la communauté Ballolé.</p>
+  <section id="presentation" class="mb-5">
+    <h2 class="section-title">Présentation : L'Écho de Ballolé</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <p>Notre association rassemble des jeunes issus de la diaspora guinéenne-bissauienne, originaires du village de Ballolé : la fusion des deux villages Capol et Badjopi qui incarnent l’esprit de « ne former qu’un ».</p>
+            <p>Fondée en 1990 sous le nom de Ballolé Union en France, elle reposait alors sur l'engagement de la génération précédente pour transmettre nos valeurs et notre patrimoine.</p>
+            <p>Après quelques années d'absence, la nouvelle génération a repris le flambeau.</p>
+            <p>Aujourd'hui, Jeunesse Ballolé est forte de plus de 90 adhérents. Nous nous engageons à perpétuer et à renouveler ce lien intergénérationnel et interculturel qui nous unit. Nous avons à cœur de transmettre la culture et la connaissance qui font notre identité, en créant un espace d’échange et de solidarité pour préserver les traditions de nos parents tout en ouvrant de nouvelles perspectives pour l’avenir.</p>
+            <h3 class="mt-3">Notre Mission : Semer l'Avenir, Cultiver nos Racines</h3>
+            <p>Notre cœur bat à l'unisson de deux aspirations :</p>
+            <ul>
+                <li><strong>Rassembler :</strong> Créer des ponts joyeux entre tous les jeunes Ballolé de France, tissant des liens d'amitié et de partage. Et au-delà, embraser la communauté Manjack autour d'événements où la culture et la fête dansent ensemble.</li>
+                <li><strong>Révéler :</strong> Offrir au monde le spectacle de notre culture, la mélodie de notre langue, la profondeur de notre histoire. Être les ambassadeurs d'une identité riche et fascinante.</li>
+                <li><strong>Déployer :</strong> Être les artisans d'un avenir meilleur pour nos villages, Kapual et Bajopi, et pour notre magnifique Guinée Bissau. Ensemble, imaginons et développons des projets porteurs d'espoir, en semant les graines de la solidarité.</li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/VOTRE_ID_DE_VIDEO" title="Vidéo de présentation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
         </div>
-    </footer>
-    
+    </div>
+</section>
+
+
+
+<section id="bureau" class="mb-5">
+    <h2 class="section-title"><i class="bi bi-people-fill me-2"></i> Notre Bureau</h2>
+    <div class="bureau-grid">
+        <div class="membre-card">
+            <div class="photo-container">
+                <img src="images/membre1.jpg" alt="Felix Mendy">
+            </div>
+            <div class="membre-info">
+                <h5>Felix Mendy</h5>
+                <p class="poste"><i class="bi bi-star-fill me-1"></i> Président</p>
+            </div>
+        </div>
+        <div class="membre-card">
+            <div class="photo-container">
+                <img src="images/membre2.jpg" alt="Anna Gomis">
+            </div>
+            <div class="membre-info">
+                <h5>Anna Gomis</h5>
+                <p class="poste"><i class="bi bi-star-half me-1"></i> Vice-Présidente</p>
+            </div>
+        </div>
+        <div class="membre-card">
+            <div class="photo-container">
+                <img src="images/membre_aurelia.jpg" alt="Aurélia Mendy">
+            </div>
+            <div class="membre-info">
+                <h5>Aurélia Mendy</h5>
+                <p class="poste"><i class="bi bi-envelope-fill me-1"></i> Secrétaire</p>
+            </div>
+        </div>
+        <div class="membre-card">
+            <div class="photo-container">
+                <img src="images/membre_vacant.jpg" alt="Poste Vacant">
+            </div>
+            <div class="membre-info">
+                <h5>Poste Vacant</h5>
+                <p class="poste"><i class="bi bi-envelope me-1"></i> Secrétaire-Adjointe</p>
+            </div>
+        </div>
+        <div class="membre-card">
+            <div class="photo-container">
+                <img src="images/membre3.jpg" alt="Samuel Mendy">
+            </div>
+            <div class="membre-info">
+                <h5>Samuel Mendy</h5>
+                <p class="poste"><i class="bi bi-piggy-bank-fill me-1"></i> Trésorier</p>
+            </div>
+        </div>
+        <div class="membre-card">
+            <div class="photo-container">
+                <img src="images/membre_fatou.jpg" alt="Fatou Vaz">
+            </div>
+            <div class="membre-info">
+                <h5>Fatou Vaz</h5>
+                <p class="poste"><i class="bi bi-piggy-bank me-1"></i> Trésorière-Adjointe</p>
+            </div>
+        </div>
+        <div class="membre-card responsables-card">
+            <div class="photo-container photo-double">
+                <div class="mini-photo"><img src="images/membre_nadege_laurent.jpg" alt="Nadège"></div>
+                <div class="mini-photo"><img src="images/membre_laurent.jpg" alt="Laurent"></div>
+            </div>
+            <div class="membre-info">
+                <h5>Nadège et Laurent</h5>
+                <p><i class="bi bi-gear-fill me-1"></i> Responsables du Pôle Événementiel</p>
+                <p><i class="bi bi-telephone-fill me-1"></i> Contact Nadège : 06 26 70 47 61</p>
+                <p><i class="bi bi-telephone-fill me-1"></i> Contact Laurent : 06 05 68 59 55</p>
+            </div>
+        </div>
+        <div class="membre-card responsables-card">
+            <div class="photo-container photo-double">
+                <div class="mini-photo"><img src="images/membre_aurelia.jpg" alt="Aurélia"></div>
+                <div class="mini-photo"><img src="images/membre2.jpg" alt="Anna"></div>
+            </div>
+            <div class="membre-info">
+                <h5>Aurélia et Anna</h5>
+                <p><i class="bi bi-magic me-1"></i> Responsables du Pôle Animation</p>
+            </div>
+        </div>
+        <div class="membre-card representant-card">
+            <div class="photo-container">
+                <img src="images/membre_olivera.jpg" alt="Olivera Mendes">
+            </div>
+            <div class="membre-info">
+                <h5>Olivera Mendes</h5>
+                <p><i class="bi bi-chat-dots-fill me-1"></i> Représentant des membres</p>
+                <p class="contact"><i class="bi bi-telephone-fill me-1"></i> 07 62 98 80 65</p>
+                <p><i class="bi bi-lightbulb-fill me-1"></i></p>
+            </div>
+        </div>
+        <div class="membre-card">
+            <div class="photo-container">
+                <img src="images/membre_melinda.jpg" alt="Mélinda Gomis">
+            </div>
+            <div class="membre-info">
+                <h5>Mélinda Gomis</h5>
+                <p><i class="bi bi-bullhorn-fill me-1"></i> Responsable du Pôle Communication</p>
+            </div>
+        </div>
+        <div class="membre-card">
+            <div class="photo-container">
+                <img src="images/membre_elisabeth_agnes.jpg" alt="Elisabeth Gomis">
+            </div>
+            <div class="membre-info">
+                <h5>Elisabeth Gomis</h5>
+                <p><i class="bi bi-heart-fill me-1"></i> Responsable du Pôle Humanitaire</p>
+            </div>
+        </div>
+        <div class="nom-important">
+            <h4><i class="bi bi-exclamation-triangle-fill me-2"></i> Un NOM IMPORTANT À CONNAÎTRE ...</h4>
+            <p><i class="bi bi-info-circle-fill me-1"></i> Le représentant des membres est une personne à qui tu peux te confier sur des points positifs comme négatifs concernant tout types de sujets en rapport avec l'association... N'hésite pas à le solliciter en cas de problème !</p>
+        </div>
+    </div>
+</section>
+
+<style>
+
+ #bureau .section-title {
+    font-family: 'VotrePolice', sans-serif;
+    font-size: 2.2em;
+    color:rgb(2, 2, 177);
+    text-align: center;
+    margin-bottom: 2rem; /* Conserver ou ajuster la marge du bas */
+    text-transform: uppercase;
+    padding-bottom: 0.5rem;
+}
+
+    .bureau-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+    }
+
+    .membre-card {
+        background-color: #f8f9fa;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding: 1.5rem;
+        text-align: center;
+    }
+
+    .photo-container {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: 0 auto 1rem;
+        border: 5px solid #bee5eb;
+    }
+
+    .photo-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .photo-container.photo-double {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .photo-container.photo-double .mini-photo {
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 3px solid #bee5eb;
+    }
+
+    .photo-container.photo-double .mini-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .membre-info h5 {
+        font-family: 'Luckiest Guy', cursive;
+        font-size: 1.4em;
+        color: #28a745;
+        margin-bottom: 0.5rem;
+    }
+
+    .membre-info p {
+        font-family: 'Handlee', cursive;
+        font-size: 1.1em;
+        color: #495057;
+        margin-bottom: 0.3rem;
+    }
+
+    .membre-info .poste {
+        font-style: italic;
+        color: #6c757d;
+    }
+
+    .membre-info .contact {
+        font-weight: bold;
+        color: #007bff;
+    }
+
+    .nom-important {
+        grid-column: 1 / -1;
+        background-color: #fff3cd;
+        border: 1px solid #ffeeba;
+        color: #85640a;
+        padding: 1.5rem;
+        border-radius: 8px;
+        text-align: center;
+    }
+
+    .nom-important h4 {
+        font-family: 'Creepster', cursive;
+        font-size: 2em;
+        margin-bottom: 0.5rem;
+    }
+
+    .nom-important p {
+        font-family: 'Handlee', cursive;
+        font-size: 1.1em;
+    }
+</style>
+
+
+
+        <section id="poles" class="mb-5">
+            <h2 class="section-title"><i class="bi bi-check-square-fill me-2"></i> Nos Pôles d'Action</h2>
+            <p class="text-center mb-4">Pour l’avancée et le bon fonctionnement de l’association, nous avons divisé l’organisation en 4 pôles. L'inscription n'est pas obligatoire, mais vous pouvez les rejoindre à tout moment pour contribuer activement !</p>
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-body d-flex flex-column align-items-center text-center">
+                            <i class="bi bi-calendar-event-fill text-primary mb-3" style="font-size: 2rem;"></i>
+                            <h5 class="card-title">Pôle Événementiel</h5>
+                            <p class="card-text">Ce pôle est le cœur battant de nos rencontres ! Il se charge de l'organisation de tous nos événements, depuis la recherche de lieux conviviaux et le contact avec des prestataires talentueux, jusqu'à la gestion logistique minutieuse en amont et le bon déroulement le jour J. Ensemble, créons des moments mémorables !</p>
+                            <div class="image-placeholder mt-3">
+                                <i class="bi bi-image-fill" style="font-size: 2rem; color: #aaa;"></i>
+                                <small class="text-muted d-block">Image de l'organisation d'événements</small>
+                            </div>
+                            <p class="card-text mt-2"><strong>Contact :</strong> Nadège (06 26 70 47 61) ou Laurent (06 05 68 59 55)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-body d-flex flex-column align-items-center text-center">
+                            <i class="bi bi-puzzle-fill text-success mb-3" style="font-size: 2rem;"></i>
+                            <h5 class="card-title">Pôle Animation</h5>
+                            <p class="card-text">L'imagination et la convivialité sont les maîtres mots de ce pôle ! Il concocte des activités ludiques et enrichissantes pour nos jeunes adhérents, favorisant ainsi les rencontres et la création de liens dès le plus jeune âge. Des animations sont également proposées pour tous les membres lors de nos événements. Rejoignez-nous pour semer la joie !</p>
+                            <div class="image-placeholder mt-3">
+                                <i class="bi bi-people-fill" style="font-size: 2rem; color: #aaa;"></i>
+                                <small class="text-muted d-block">Image d'activités pour les jeunes</small>
+                            </div>
+                            <p class="card-text mt-2"><strong>Contact :</strong> Aurélia (07 64 29 19 77) ou Anna (06 46 29 86 43)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-body d-flex flex-column align-items-center text-center">
+                            <i class="bi bi-globe text-warning mb-3" style="font-size: 2rem;"></i>
+                            <h5 class="card-title">Pôle Communication</h5>
+                            <p class="card-text">Ce pôle est notre porte-voix ! Il gère l'ensemble de notre communication sur tous les supports : réseaux sociaux pour partager nos actualités et événements, création de supports visuels percutants comme des banderoles et des tee-shirts à l'effigie de l'association, et mise en place d'appels aux dons créatifs pour soutenir nos projets. Faites entendre la voix de Ballolé avec nous !</p>
+                            <div class="image-placeholder mt-3">
+                                <i class="bi bi-share-fill" style="font-size: 2rem; color: #aaa;"></i>
+                                <small class="text-muted d-block">Image de communication et réseaux sociaux</small>
+                            </div>
+                            <p class="card-text mt-2"><strong>Contact :</strong> Mélinda (07 60 38 99 83)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-body d-flex flex-column align-items-center text-center">
+                            <i class="bi bi-heart-fill text-danger mb-3" style="font-size: 2rem;"></i>
+                            <h5 class="card-title">Pôle Humanitaire</h5>
+                            <p class="card-text">La solidarité est au cœur de ce pôle ! Il organise des actions concrètes pour soutenir les populations dans le besoin, aussi bien localement qu'en Guinée Bissau. Maraudes chaleureuses, collectes de dons généreuses, envois de matériel essentiel... Ce pôle agit également en interne en offrant un soutien précieux à nos adhérents dans leur recherche d'emploi. Ensemble, faisons une différence !</p>
+                            <div class="image-placeholder mt-3">
+                                <i class="bi bi-hand-heart-fill" style="font-size: 2rem; color: #aaa;"></i>
+                                <small class="text-muted d-block">Image d'actions humanitaires et solidaires</small>
+                            </div>
+                            <p class="card-text mt-2"><strong>Contact :</strong> Elisabeth (07 62 12 91 10) ou Agnès (07 53 90 63 84)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="mt-3 text-center">Rejoindre un pôle est une opportunité enrichissante de contribuer activement à la vie de l'association. N'hésitez pas à contacter le responsable du pôle qui vous intéresse. Vous pouvez même vous investir dans plusieurs pôles ! Votre engagement fait la force de Jeunesse Ballolé.</p>
+        </section>
+        
+        <style>
+            /* Styles supplémentaires pour les placeholders d'images */
+            .image-placeholder {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 80px; /* Ajustez la hauteur selon vos besoins */
+                background-color: #f8f9fa;
+                border: 1px dashed #ccc;
+                border-radius: 5px;
+            }
+        </style>
+
+
+
+    <section id="soutenez-nous" class="mb-5">
+        <h2 class="section-title"><i class="bi bi-heart-fill me-2" style="color: #007bff;"></i> Soutenez-nous</h2>
+        </section>
+    <div class="objectif p-3 mb-4 d-flex align-items-center justify-content-center" style="background-color: #e9ecef; border-radius: 8px;">
+        <i class="bi bi-piggy-bank-fill text-success me-2" style="font-size: 1.5rem;"></i>
+        <p class="mb-0" style="font-size: 1.2rem; text-align: center;">Notre objectif de financement : <strong style="font-size: 1.5rem; color: #007bff;">100.000€</strong></p>
+    </div>
+
+    <div class="row mb-4 p-3" style="background-color: #f8f9fa; border: 1px solid #ddd; border-radius: 8px;">
+        <div class="col-md-6">
+            <h4 style="font-family: 'Georgia', serif; color: #555; font-style: italic; margin-bottom: 1rem; text-align: left;">Notre plan de financement :</h4>
+            <ul style="padding-left: 20px; list-style: none; text-align: left;">
+                <li class="mb-2"><i class="bi bi-tag-fill text-info me-2"></i>Ventes diverses (t-shirts et autres)</li>
+                <li class="mb-2"><i class="bi bi-calendar-event-fill text-primary me-2"></i>Événements associatifs</li>
+                <li class="mb-2"><i class="bi bi-briefcase-fill text-secondary me-2"></i>Missions diverses</li>
+                <li class="mb-2"><i class="bi bi-cash-coin text-success me-2"></i>Intérim</li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <h4 style="font-family: 'Georgia', serif; color: #555; font-style: italic; margin-bottom: 1rem; text-align: left;">Vos dons attendus :</h4>
+            <div class="mb-3" style="text-align: left;">
+                <h5 style="color: #28a745;"><i class="bi bi-currency-euro me-2"></i>Dons Financiers</h5>
+                <p style="font-size: 0.9rem; color: #777;">Votre contribution financière a un impact direct sur nos actions. Soutenez nos projets en faisant un don en ligne via HelloAsso ou contactez-nous pour d'autres modalités.</p>
+                <a href="https://www.helloasso.com/associations/jeunesse-ballole/faire-un-don" target="_blank" class="btn btn-outline-success btn-sm"><i class="bi bi-heart-fill me-2"></i>Faire un don</a>
+            </div>
+            <div class="mb-3" style="text-align: left;">
+                <h5 style="color: #007bff;"><i class="bi bi-box-seam-fill me-2"></i>Dons Matériels</h5>
+                <p style="font-size: 0.9rem; color: #777;">Nous avons besoin de matériel pour nos projets et nos activités. Voici quelques exemples : Matériel sportif, Fournitures scolaires, Matériel informatique, Outils pour nos ateliers. Contactez-nous pour organiser la collecte ou la livraison.</p>
+                <a href="contact_Ballole.html" class="btn btn-outline-primary btn-sm"><i class="bi bi-gift-fill me-2"></i>Proposer un don</a>
+            </div>
+            <div style="text-align: left;">
+                <h5 style="color: #ffc107;"><i class="bi bi-handshake-fill me-2"></i>Dons Immatériels</h5>
+                <p style="font-size: 0.9rem; color: #777;">Vos compétences et votre temps sont aussi de précieux dons. Vous pouvez nous aider par : Bénévolat lors d'événements, Aide à l'organisation et la logistique, Partage de compétences, Traductions. Faites-nous savoir comment vous souhaitez vous impliquer !</p>
+                <button class="btn btn-outline-warning btn-sm" data-bs-toggle="modal" data-bs-target="#contactModal"><i class="bi bi-person-plus-fill me-2"></i>Devenir bénévole</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="p-4" style="background-color: #f0fff0; border: 2px solid #28a745; border-radius: 8px; text-align: center;">
+        <h3 style="font-family: 'Arial', sans-serif; color: #333; font-size: 1.8rem; margin-bottom: 1rem;">VOUS SOUHAITEZ NOUS AIDER ?</h3>
+        <p style="font-family: 'Calibri', sans-serif; font-size: 1.1rem; color: #777; line-height: 1.7;">Votre soutien est essentiel pour la réalisation de nos projets et le soutien de notre communauté. Si vous souhaitez faire un don financier direct, vous pouvez utiliser le bouton ci-dessous.</p>
+        <a href="nous_aider.html#dons-financiers" class="btn btn-success" style="font-family: 'Segoe UI', sans-serif; font-weight: bold; text-decoration: none;"><i class="bi bi-heart-fill me-2"></i>Faire un don via HelloAsso</a>
+    </div>
+</section>
+
+<section id="cotisations" class="mb-5">
+    <h2 class="section-title"><i class="bi bi-cash-coin text-success me-2"></i> Cotisations </h2>
+    <p class="text-center"><i class="bi bi-calendar-event text-info me-2"></i> Nous fonctionnons par <strong>année scolaire</strong> (<em>septembre à septembre</em>).</p>
+    <p class="text-center"><i class="bi bi-tag text-warning me-2"></i> Cotisation annuelle : <strong style="font-size: 1.3rem; color: #007bff;">50€</strong> (<mark>30€ pour les mineurs</mark>).</p>
+    <p class="text-center"><i class="bi bi-clock-fill text-primary me-2"></i> Prochaine cotisation : <strong style="color: #28a745;">à partir de septembre</strong>. Vous avez <em>1 an</em> pour re-cotiser (du 1er septembre 2024 au 31 août 2025 pour l'année prochaine). </p>
+    <p class="text-center"><i class="bi bi-exclamation-triangle-fill text-danger me-2"></i> <strong>Retard de paiement :</strong> <span style="font-size: 1.1rem; color: #ffc107;">Majoration de 30%</span>.</p>
+    <div class="text-center mt-3">
+        <i class="bi bi-party-popper text-primary me-2" style="font-size: 1.5rem;"></i> Rejoignez <strong class="text-success">l'aventure Ballolé</strong> ! <i class="bi bi-party-popper text-primary ms-2" style="font-size: 1.5rem;"></i>
+    </div>
+</section>
+
+
+<section id="equipesSportives" class="mb-5">
+    <h2 class="section-title"><i class="bi bi-trophy-fill text-success me-2"></i> Nos Équipes Sportives </h2>
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col">
+            <div class="card h-100">
+                <img src="img/fc_ballole.jpg" class="card-img-top" alt="Équipe de Football FC Ballolé" style="object-fit: cover; height: 200px;">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="bi bi-football-fill text-primary me-2"></i> FC Ballolé (Football)</h5>
+                    <p class="card-text">Participez à des matchs et tournois ! <strong class="text-success">Pas d’âge ou de niveau requis.</strong></p>
+                    <p class="card-text"><i class="bi bi-person-fill text-info me-2"></i> <strong>Contact :</strong> Laurent (<a href="tel:0605685955" class="text-decoration-none text-primary">06 05 68 59 55</a>) ou Pierrot (<a href="tel:0767024345" class="text-decoration-none text-primary">07 67 02 43 45</a>)</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="img/basket_ajb.jpg" class="card-img-top" alt="Équipe de Basket Basket AJB" style="object-fit: cover; height: 200px;">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="bi bi-basketball-fill text-warning me-2"></i> Basket AJB</h5>
+                    <p class="card-text">Rejoignez l'équipe de basket ! <strong class="text-success">Pas d’âge ou de niveau requis.</strong></p>
+                    <p class="card-text"><i class="bi bi-person-fill text-info me-2"></i> <strong>Contact :</strong> Wannie (<a href="tel:0646363724" class="text-decoration-none text-primary">06 46 36 37 24</a>) ou Damien (<a href="tel:0665423352" class="text-decoration-none text-primary">06 65 42 33 52</a>)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="coursManjack" class="mb-5">
+    <h2 class="section-title"><i class="bi bi-translate-fill text-primary me-2"></i> Cours de Manjack</h2>
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col">
+            <div class="card h-100">
+                <img src="img/cours_manjack_1.jpg" class="card-img-top" alt="Image du cours de Manjack" style="object-fit: cover; height: 200px;">
+                <div class="card-body">
+                    <p class="card-text"><i class="bi bi-book-fill text-info me-2"></i> Cours de manjack <strong class="text-success">gratuits pour tous les adhérents</strong> dispensés par Etienne et Eric (2 à 3 fois par mois en <span class="text-warning">distanciel</span> ou <span class="text-warning">présentiel</span>).</p>
+                    <p class="card-text"><i class="bi bi-chat-dots-fill text-secondary me-2"></i> Apprenez les bases pour tenir des conversations <strong class="text-primary">aisément</strong>.</p>
+                    <p class="card-text"><i class="bi bi-person-rolodex text-warning me-2"></i> <strong>Pour s’inscrire, contactez le président :</strong> <a href="tel:0658056949" class="text-decoration-none text-success">06 58 05 69 49</a> <i class="bi bi-telephone-fill text-success ms-2"></i></p>
+                    <p class="card-text"><i class="bi bi-file-earmark-text-fill text-danger me-2"></i> <a href="#" class="text-decoration-none text-info">Règlement des cours de Manjack (PAGE 9 à 11 du guide : redirection à mettre)</a> <i class="bi bi-arrow-right-square-fill text-info ms-2"></i></p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="img/cours_manjack_2.jpg" class="card-img-top" alt="Autre image du cours de Manjack" style="object-fit: cover; height: 200px;">
+                <div class="card-body">
+                    <p class="card-text"><i class="bi bi-question-circle-fill text-primary me-2"></i> Des questions sur les cours ? N'hésitez pas à nous contacter !</p>
+                    <p class="card-text"><i class="bi bi-calendar-event-fill text-info me-2"></i> Prochains cours : Consultez notre calendrier des événements.</p>
+                    <p class="card-text"><i class="bi bi-people-fill text-warning me-2"></i> Rejoignez une communauté passionnée par la langue Manjack.</p>
+                    </div>
+            </div>
+        </div>
+
+        </main>
+
+        <footer class="bg-primary text-light py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 text-center text-md-start">
+                        <h5 class="mb-3"><i class="bi bi-envelope-fill me-2"></i> <span style="font-size: 1.2rem;">Nous Contacter</span></h5>
+                        <p style="font-size: 1.1rem;"><i class="bi bi-arrow-right-circle-fill me-2 align-middle" style="color: #ffc107;"></i> Email: <a href="mailto:contact@jeunesseballole.org" class="text-decoration-none text-light align-middle">contact@jeunesseballole.org</a></p>
+                        <p style="font-size: 1.1rem;"><i class="bi bi-arrow-right-circle-fill me-2 align-middle" style="color: #ffc107;"></i> Téléphone (Président actuel): <a href="tel:[Numéro de téléphone du président]" class="text-decoration-none text-light align-middle">[Numéro de téléphone du président]</a></p>
+                        <p style="font-size: 1.1rem;"><i class="bi bi-question-circle-fill me-2 align-middle" style="color: #ffc107;"></i> Vous avez une question ? N'hésitez pas à nous écrire !</p>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <h5 class="mb-3"><i class="bi bi-geo-alt-fill me-2"></i> <span style="font-size: 1.2rem;">Nous Trouver</span></h5>
+                        <p class="text-light" style="font-size: 1.1rem;"><i class="bi bi-building me-2 align-middle" style="color: #ffc107;"></i> <strong>Siège Social :</strong></p>
+                        <p class="text-light" style="font-size: 1.1rem;"><i class="bi bi-map me-2 align-middle" style="color: #ffc107;"></i> [Adresse de l'association]</p>
+                        <p class="text-light" style="font-size: 1.1rem;"><i class="bi bi-flag-fill me-2 align-middle" style="color: #ffc107;"></i> France</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h5 class="mb-3 text-center text-md-start" style="color: #ffc107;"><i class="bi bi-share-fill me-2"></i> <span style="font-size: 1.2rem;">Suivez-nous sur nos Réseaux Sociaux</span></h5>
+                        <ul class="list-unstyled text-center text-md-start">
+                            <li class="mb-2">
+                                <a href="https://www.facebook.com/people/Jeunesse-Ballol%C3%A9/" target="_blank" class="text-decoration-none text-light d-flex align-items-center justify-content-center justify-content-md-start">
+                                    <span style="width: 7em; text-align: left; margin-right: 0.3em;">Facebook</span>
+                                    <div style="width: 1em; text-align: center;">
+                                        <i class="bi bi-arrow-right-circle-fill align-middle" style="color: #ffc107;"></i>
+                                    </div>
+                                    <i class="bi bi-facebook fs-3 ms-2 align-middle"></i>
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#" target="_blank" class="text-decoration-none text-light d-flex align-items-center justify-content-center justify-content-md-start">
+                                    <span style="width: 7em; text-align: left; margin-right: 0.3em;">LinkedIn</span>
+                                    <div style="width: 1em; text-align: center;">
+                                        <i class="bi bi-arrow-right-circle-fill align-middle" style="color: #ffc107;"></i>
+                                    </div>
+                                    <i class="bi bi-linkedin fs-3 ms-2 align-middle"></i>
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="https://www.instagram.com/jeunesse_ballole/" target="_blank" class="text-decoration-none text-light d-flex align-items-center justify-content-center justify-content-md-start">
+                                    <span style="width: 7em; text-align: left; margin-right: 0.3em;">Instagram</span>
+                                    <div style="width: 1em; text-align: center;">
+                                        <i class="bi bi-arrow-right-circle-fill align-middle" style="color: #ffc107;"></i>
+                                    </div>
+                                    <i class="bi bi-instagram fs-3 ms-2 align-middle"></i>
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#" target="_blank" class="text-decoration-none text-light d-flex align-items-center justify-content-center justify-content-md-start">
+                                    <span style="width: 7em; text-align: left; margin-right: 0.3em;">TikTok</span>
+                                    <div style="width: 1em; text-align: center;">
+                                        <i class="bi bi-arrow-right-circle-fill align-middle" style="color: #ffc107;"></i>
+                                    </div>
+                                    <i class="bi bi-tiktok fs-3 ms-2 align-middle"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <hr class="my-4">
+                <div class="text-center text-light">
+                    <p style="font-size: 1.1rem;">© 2025 Jeunesse Ballolé. Tous droits réservés.</p>
+                    <p class="small">Réalisé avec <i class="bi bi-heart-fill text-danger"></i> par la jeunesse Ballolé.</p>
+                </div>
+            </div>
+        </footer>
+
     <style>
         .bg-primary {
             background-color: #2c3e50 !important; /* Un bleu foncé chaleureux - vous pouvez le changer */
@@ -536,93 +810,5 @@
     </style>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            // Partie Don (si vous l'avez incluse dans votre HTML)
-            const optionsDon = document.querySelectorAll(".option-don");
-            const boutonsFreq = document.querySelectorAll(".bouton-freq-don");
-            const boutonDonnerMaintenant = document.querySelector(".don-button");
-            const montantPersonnaliseInput = document.getElementById("montant-personnalise");
-            let montantSelectionne = 50;
-            let frequenceSelectionnee = "Mensuel";
-
-            if (optionsDon && boutonsFreq && boutonDonnerMaintenant && montantPersonnaliseInput) {
-                optionsDon.forEach(option => {
-                    option.addEventListener("click", function () {
-                        optionsDon.forEach(opt => opt.classList.remove("actif"));
-                        this.classList.add("actif");
-                        if (this.getAttribute("data-montant") === "Autre") {
-                            montantPersonnaliseInput.classList.remove("d-none");
-                            montantPersonnaliseInput.addEventListener("input", function() {
-                                montantSelectionne = this.value ? this.value : 0;
-                                mettreAJourBoutonDon();
-                            });
-                        } else {
-                            montantPersonnaliseInput.classList.add("d-none");
-                            montantSelectionne = this.getAttribute("data-montant");
-                            mettreAJourBoutonDon();
-                        }
-                    });
-                });
-
-                boutonsFreq.forEach(button => {
-                    button.addEventListener("click", function () {
-                        boutonsFreq.forEach(btn => btn.classList.remove("actif"));
-                        this.classList.add("actif");
-                        frequenceSelectionnee = this.innerText;
-                        mettreAJourBoutonDon();
-                    });
-                });
-
-                function mettreAJourBoutonDon() {
-                    boutonDonnerMaintenant.innerHTML = `<img src="images/Icone2.png" alt="Icône" style="height:1em; vertical-align:middle;"> Faire un don de ${montantSelectionne}€/${frequenceSelectionnee.toLowerCase()}`;
-                }
-
-                // Initialisation de l'affichage du bouton au chargement de la page
-                mettreAJourBoutonDon();
-            }
-
-            // --- Partie Mise en évidence du lien de navigation actif ---
-            const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-            const sections = document.querySelectorAll('section');
-
-            function highlightNavLink() {
-                let currentSectionId = '';
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    const sectionHeight = section.offsetHeight;
-                    if (pageYOffset >= sectionTop - sectionHeight / 4 && pageYOffset < sectionTop + sectionHeight - sectionHeight / 4) {
-                        currentSectionId = section.getAttribute('id');
-                    }
-                });
-
-                navLinks.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href').substring(1) === currentSectionId) {
-                        link.classList.add('active');
-                    } else if (currentSectionId === '' && link.getAttribute('href') === 'index.html') {
-                        link.classList.add('active'); // Si sur la page d'accueil et aucune section visible
-                    }
-                });
-            }
-
-            // Écouteur d'événement pour mettre en évidence le lien de navigation au défilement
-            window.addEventListener('scroll', highlightNavLink);
-            highlightNavLink(); // Appeler une fois au chargement pour la section initiale
-
-            // --- Partie Fermeture du menu déroulant Bootstrap au clic ---
-            const dropdownLinks = document.querySelectorAll('.dropdown-menu .dropdown-item');
-            const navbarCollapse = document.querySelector('.navbar-collapse');
-
-            dropdownLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    if (window.getComputedStyle(navbarCollapse).display !== 'none') {
-                        const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
-                        bsCollapse.hide();
-                    }
-                });
-            });
-        });
-    </script>
 </body>
 </html>
