@@ -672,6 +672,86 @@ footer {
     transform: scale(1.1); /* Agrandit l'icône de 10% au survol */
 }
 
+
+
+
+
+/* ... autres styles ... */
+
+/* Styles pour les icônes des réseaux sociaux sur les écrans plus grands */
+.navbar-brand-social.d-none.d-md-flex a {
+    font-size: 1.5rem;
+    margin-left: 0.75rem;
+}
+.navbar-brand-social.d-none.d-md-flex a:first-child {
+    margin-left: 0;
+}
+
+/* Styles pour les icônes des réseaux sociaux en responsive */
+.navbar-brand-social.d-md-none.mt-2 {
+    display: flex; /* Active Flexbox sur le conteneur des icônes */
+    justify-content: space-around; /* Distribue l'espace autour des icônes */
+    width: 100%; /* Occupe toute la largeur du parent */
+    padding: 0 1rem; /* Ajoute un peu de marge intérieure sur les côtés */
+}
+
+.navbar-brand-social.d-md-none.mt-2 a {
+    font-size: 1.75rem;
+    margin-right: 0; /* Supprime les marges individuelles, l'espacement est géré par justify-content */
+}
+
+/* ... autres styles responsive ... */
+@media (max-width: 767.98px) {
+    /* ... autres styles responsive ... */
+
+    .navbar-collapse.show .navbar-nav .dropdown-menu {
+        background-color: #f8f9fa;
+        border: 1px solid #184b7e;
+        border-top: none;
+        text-align: center;
+    }
+
+    .navbar-collapse.show .navbar-nav .dropdown-item {
+        color: #184b7e;
+        text-align: center;
+    }
+
+    .navbar-collapse.show .navbar-nav .dropdown-item:hover,
+    .navbar-collapse.show .navbar-nav .dropdown-item:focus {
+        background-color: #e0f2f7;
+        color: #cb166b;
+    }
+}
+
+
+
+
+
+
+
+
+@media (max-width: 767.98px) {
+    /* ... autres styles responsive ... */
+
+    .navbar-collapse.show .navbar-nav .dropdown-menu {
+        background-color: #cb166b; /* Un gris très clair, comme le fond des cartes */
+        border: 1px solid #184b7e; /* Ajoute une bordure légère pour la démarcation */
+        border-top: none; /* Supprime la bordure du haut pour un aspect plus propre */
+
+    }
+
+    .navbar-collapse.show .navbar-nav .dropdown-item {
+        color: #333; /* Assure que le texte des liens est bien visible */
+    }
+
+    .navbar-collapse.show .navbar-nav .dropdown-item:hover,
+    .navbar-collapse.show .navbar-nav .dropdown-item:focus {
+        background-color: #2c7ac9; /* Un gris encore plus clair au survol/focus */
+    }
+}
+
+
+
 @media (max-width: 768px) {
     /* ... autres styles ... */
 
@@ -852,3 +932,6 @@ footer {
     /* ... le reste de vos règles pour le responsive ... */
 }
 
+    /* ... autres styles ... */
+
+   
