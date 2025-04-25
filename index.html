@@ -230,6 +230,7 @@
         }
     </style>
 </head>
+
 <body>
     <header>
         <nav class="navbar navbar-expand-md navbar-dark bg-dark">
@@ -259,7 +260,7 @@
                                 <li><a class="dropdown-item" href="index.html#poles">Nos Pôles d'Action</a></li>
                                 <li><a class="dropdown-item" href="index.html#equipesSportives">Nos Équipes Sportives</a></li>
                                 <li><a class="dropdown-item" href="index.html#coursManjack">Cours de Manjack</a></li>
-                                <li><a class="dropdown-item" href="index.html#cotisations">Cotisations</a></li>
+                                <li><a class="dropdown-item" href="#reseauxSociauxFooter">Nos Contacts & Réseaux Sociaux</a></li>
                             </ul>
                         </li>
                         <li class="nav-item"><a class="nav-link" href="qui_sommes_nous.html">Qui sommes-nous ?</a></li>
@@ -409,7 +410,7 @@
             </div>
             <div class="membre-info">
                 <h5>Elisabeth Gomis</h5>
-                <p><i class="bi bi-heart-fill me-1"></i> Responsable du Pôle Humanitaire</p>
+                <p><i class="bi-people-fill"></i> Responsable du Pôle Humanitaire</p>
             </div>
         </div>
 
@@ -732,10 +733,49 @@
                     </div>
             </div>
         </div>
+   
+    </main>
 
-        </main>
+    <button id="scrollToTopBtn" class="btn btn-outline-light btn-sm fixed-bottom m-3" style="opacity: 0.7; right: 20px; bottom: 20px; z-index: 1000; display: none;">
+        <i class="bi bi-arrow-up-short"></i> Retour en haut
+    </button>
 
-        <footer class="bg-primary text-light py-5">
+    <script>
+        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollToTopBtn.style.display = 'block';
+            } else {
+                scrollToTopBtn.style.display = 'none';
+            }
+        });
+
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+
+    </main>
+
+
+    <button id="scrollToTopBtn" class="btn btn-outline-light btn-sm fixed-bottom m-3" style="display: none;">
+        <i class="bi bi-arrow-up-short"></i> Retour en haut
+    </button>
+    
+    <style>
+        #scrollToTopBtn {
+            opacity: 0.7; /* Légèrement transparent */
+            right: 20px;
+            bottom: 20px;
+            z-index: 1000; /* Pour être au-dessus des autres éléments */
+        }
+    </style>
+
+        <footer class="bg-primary text-light py-5" id="reseauxSociauxFooter">
             <div class="container">
                 <div class="row">
                     <div class="col-md-4 text-center text-md-start">

@@ -84,3 +84,23 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+
+const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+// Affiche le bouton lorsque l'utilisateur fait défiler vers le bas
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) { // Ajustez la valeur selon votre besoin
+        scrollToTopBtn.style.display = 'block';
+    } else {
+        scrollToTopBtn.style.display = 'none';
+    }
+});
+
+// Fait défiler en douceur vers le haut lorsque le bouton est cliqué
+scrollToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
